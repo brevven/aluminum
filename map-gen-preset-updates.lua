@@ -4,7 +4,7 @@ if data.raw["map-gen-presets"] and data.raw["map-gen-presets"].default then
       preset.basic_settings and 
       preset.basic_settings.autoplace_controls and 
       preset.basic_settings.autoplace_controls["iron-ore"] then
-        preset.basic_settings.autoplace_controls["lead-ore"] = preset.basic_settings.autoplace_controls["iron-ore"]
+        preset.basic_settings.autoplace_controls["aluminum-ore"] = preset.basic_settings.autoplace_controls["iron-ore"]
     end
   end
 end

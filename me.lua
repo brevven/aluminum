@@ -1,6 +1,6 @@
 local me = {}
 
-me.name = "bzmod"
+me.name = "bzaluminum"
 
 function me.mod_setting()
   return me.get_setting("bzmod-setting") == "yes"
@@ -19,5 +19,12 @@ if me.get_setting(me.name.."-recipe-bypass") then
     me.bypass[recipe] = true
   end
 end
+
+function me.add_modified(name) 
+  if me.get_setting(me.name.."-list") then 
+    table.insert(me.list, name)
+  end
+end
+
 
 return me

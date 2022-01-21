@@ -1,23 +1,17 @@
+local util = require("data-util");
+
 data:extend({
   {
 		type = "string-setting",
-		name = "bzlead-recipe-bypass",
+		name = util.me.name.."-recipe-bypass",
 		setting_type = "startup",
 		default_value = "",
     allow_blank = true,
 	},
   {
-		type = "string-setting",
-		name = "bzlead-more-entities",
+		type = "bool-setting",
+		name = util.me.name.."-list",
 		setting_type = "startup",
-		default_value = "no",
-    allowed_values = {"yes", "no"},
-	},
-  { -- TODO remove this in 2022
-		type = "string-setting",
-		name = "bzlead-sulfuric",
-		setting_type = "startup",
-		default_value = "yes",
-    allowed_values = {"yes", "no"},
+    default_value = false,
 	},
 })
