@@ -1,14 +1,14 @@
--- Enable prod modules for all lead plate and ore recipes
+-- Enable prod modules for all aluminum plate and ore recipes
 
-recipes = {"lead-plate"}
+recipes = {"alumina", "aluminum-plate", "aluminum-cable", "acsr-cable"}
 if mods["Krastorio2"] then
-  table.insert(recipes, "enriched-lead-plate")
-  table.insert(recipes, "enriched-lead")
+  table.insert(recipes, "enriched-aluminum-plate")
+  table.insert(recipes, "enriched-aluminum")
 end
 if mods["space-exploration"] then
-  table.insert(recipes, "lead-smelting-vulcanite")
+  table.insert(recipes, "aluminum-smelting-vulcanite")
   if mods["Krastorio2"] then
-    table.insert(recipes, "enriched-lead-smelting-vulcanite")
+    table.insert(recipes, "enriched-aluminum-smelting-vulcanite")
   end
 end
 
