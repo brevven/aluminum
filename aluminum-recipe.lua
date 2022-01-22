@@ -109,6 +109,26 @@ data:extend({
 data:extend({
   {
     type = "technology",
+    name = "copper-processing",
+    icon = "__base__/graphics/icons/copper-plate.png",
+    icon_size = 64, icon_mipmaps=4,
+    effects = {
+      { type = "unlock-recipe", recipe = "copper-plate" },
+      { type = "unlock-recipe", recipe = "copper-cable" },
+    },
+    unit = {
+      count = 10, time = 15,
+      ingredients = mods.Krastorio2 and 
+      {{"basic-tech-card", 1}} or {{"automation-science-pack", 1}},
+    },
+    prerequisites = {"automation"},
+    order = "b-b",
+  },
+})
+
+data:extend({
+  {
+    type = "technology",
     name = "reinforced-cable",
     icon = "__bzaluminum__/graphics/technology/reinforced-cable.png",
     icon_size = 256,
