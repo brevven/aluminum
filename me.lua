@@ -1,6 +1,7 @@
 local me = {}
 
 me.name = "bzaluminum"
+me.list = {}
 
 function me.mod_setting()
   return me.get_setting("bzmod-setting") == "yes"
