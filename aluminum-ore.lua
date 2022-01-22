@@ -22,7 +22,7 @@ data:extend({
     icon = "__bzaluminum__/graphics/icons/aluminum-ore.png",
     flags = {"placeable-neutral"},
     order="a-b-a",
-    map_color = {r=0.35, g=0.10, b=0.10},
+    map_color = {r=1.00, g=0.80, b=0.50},
     minable =
     {
       hardness = 1,
@@ -72,9 +72,9 @@ data:extend({
       icon = "__bzaluminum__/graphics/icons/aluminum-ore.png",
       pictures = {
         {filename="__bzaluminum__/graphics/icons/aluminum-ore.png", size=64, scale=0.25},
-        {filename="__bzaluminum__/graphics/icons/aluminum-ore-1.png", size=64, scale=0.25},
         {filename="__bzaluminum__/graphics/icons/aluminum-ore-2.png", size=64, scale=0.25},
         {filename="__bzaluminum__/graphics/icons/aluminum-ore-3.png", size=64, scale=0.25},
+        {filename="__bzaluminum__/graphics/icons/aluminum-ore-4.png", size=64, scale=0.25},
       },
       subgroup = "raw-resource",
       order = "t-c-a",
