@@ -1,16 +1,14 @@
-local util = require("data-util");
-
 data:extend({
   {
 		type = "string-setting",
-		name = util.me.name.."-recipe-bypass",
+		name = "bzaluminum-recipe-bypass",
 		setting_type = "startup",
 		default_value = "",
     allow_blank = true,
 	},
   {
 		type = "bool-setting",
-		name = util.me.name.."-list",
+		name = "bzaluminum-list",
 		setting_type = "startup",
     default_value = false,
 	},
