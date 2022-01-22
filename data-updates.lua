@@ -4,6 +4,8 @@ require("aluminum-matter")
 require("map-gen-preset-updates")
 require("strange-matter")
 
+local util = require("data-util");
+
 if data.raw.resource["copper-ore"] then
   if mods["space-exploration"] then
     local noise = require('noise');
