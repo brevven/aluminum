@@ -37,7 +37,7 @@ data:extend({
           { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128},
           { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
         } or {
-          { icon = "__bzaluminum__/graphics/icons/aluminaaluminum-plate.png", icon_size = 128},
+          { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128},
         }
 ),
     enabled = true,
@@ -108,6 +108,25 @@ data:extend({
 
 data:extend({
   {
+    type = "technology",
+    name = "reinforced-cable",
+    icon = "__bzaluminum__/graphics/technology/reinforced-cable.png",
+    icon_size = 256,
+    effects = {
+      { type = "unlock-recipe", recipe = "acsr-cable" },
+    },
+    unit = {
+      count = 60, time = 15,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
+    },
+    prerequisites = {"steel-processing"},
+    order = "b-b",
+  },
+})
+
+util.add_prerequisite("electric-energy-distribution-1", "reinforced-cable")
+data:extend({
+  {
     type = "item",
     name = "aluminum-cable",
     icon = "__bzaluminum__/graphics/icons/aluminum-cable.png",
@@ -125,6 +144,25 @@ data:extend({
     energy_required = 0.5,
     ingredients = {{"aluminum-plate", 2}},
     results = {{"aluminum-cable", 1}},
+  },
+  {
+    type = "item",
+    name = "acsr-cable",
+    icon = "__bzaluminum__/graphics/icons/acsr-cable.png",
+    icon_size = 128,
+    subgroup = "intermediate-product",
+    order = "b[aluminum-cable]",
+    stack_size = 50,
+  },
+  {
+    type = "recipe",
+    name = "acsr-cable",
+    category = "crafting",
+    order = "d[acsr-cable]",
+    enabled = true,
+    energy_required = 0.5,
+    ingredients = {{"aluminum-cable", 1}, {"steel-plate", 1}},
+    results = {{"acsr-cable", 1}},
   }
 })
 
