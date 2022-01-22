@@ -1,4 +1,4 @@
-require("aluminum-recipe-final-stacking")
+-- require("aluminum-recipe-final-stacking")
 require("aluminum-recipe-modules")
 -- require("aluminum-recipe-final-5d")
 require("aluminum-recipe-final-rrr")
