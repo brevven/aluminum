@@ -247,7 +247,8 @@ data:extend({
   {
     type = "recipe",
     name = "aluminum-6061",
-    category = "crafting",
+    category = "founding",
+    subgroup = "foundry-intermediate",
     order = "zz[aluminum-6061]",
     enabled = false,
     energy_required = 100,
@@ -305,7 +306,8 @@ data:extend({
   {
     type = "recipe",
     name = "aluminum-2219",
-    category = "crafting",
+    category = "founding",
+    subgroup = "foundry-intermediate",
     order = "zz[aluminum-2219]",
     enabled = false,
     energy_required = 100,
