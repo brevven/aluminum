@@ -1,8 +1,8 @@
 # Mod
 
-[factorio mod page](https://mods.factorio.com/mod/bzmod)
+[factorio mod page](https://mods.factorio.com/mod/bzaluminum)
 
-Adds ... to the base game
+Adds aluminum, alumina, alloys, and more to the base game.
 
 ## Version History
 See changelog.txt
@@ -13,5 +13,6 @@ See changelog.txt
 
 ## Thanks to 
 - [snouz](https://github.com/snouz) (logo inspiration, ore graphics templates)
+- FreeSVG/OpenClipart for spark plug: https://freesvg.org/spark-plug-vector-image
 
 ### Localization
