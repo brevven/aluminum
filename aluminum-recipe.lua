@@ -12,7 +12,7 @@ if mods.bzsilicon and not mods.Krastorio2 then
 elseif mods.bzsilicon and mods.Krastorio2 then
   alumina_results ={
     {type="item", name = "alumina", amount=5, probability=0.95},
-    {type="item", name = "silica", amount=1, probability=0.05},
+    {type="item", name = "silica", amount=1, probability=0.25},
   }
 elseif mods.Krastorio2 then
   alumina_results ={
@@ -91,6 +91,12 @@ data:extend({
     name = "alumina",
     icon = "__bzaluminum__/graphics/icons/alumina.png",
     icon_size = 128,
+    pictures = {
+      {filename="__bzaluminum__/graphics/icons/alumina.png", size=128, scale=0.125},
+      {filename="__bzaluminum__/graphics/icons/alumina-1.png", size=128, scale=0.125},
+      {filename="__bzaluminum__/graphics/icons/alumina-2.png", size=128, scale=0.125},
+      {filename="__bzaluminum__/graphics/icons/alumina-3.png", size=128, scale=0.125},
+    },
     subgroup = "raw-material",
     order = "b[alumina]",
     stack_size = util.get_stack_size(100)
@@ -152,14 +158,14 @@ data:extend({
     icon = "__bzaluminum__/graphics/icons/aluminum-cable.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "intermediate-product",
-    order = "b[aluminum-cable]",
+    order = "b[aaac-cable]",
     stack_size = util.get_stack_size(100),
   },
   {
     type = "recipe",
     name = "aluminum-cable",
     category = "crafting",
-    order = "d[aluminum-cable]",
+    order = "d[aaac-cable]",
     enabled = true,
     energy_required = 0.5,
     ingredients = {{"aluminum-plate", 2}},
@@ -171,7 +177,7 @@ data:extend({
     icon = "__bzaluminum__/graphics/icons/acsr-cable.png",
     icon_size = 128,
     subgroup = "intermediate-product",
-    order = "b[aluminum-cable]",
+    order = "b[acsr-cable]",
     stack_size = 50,
   },
   {
@@ -185,5 +191,149 @@ data:extend({
     results = {{"acsr-cable", 1}},
   }
 })
+
+data:extend({
+  {
+    type = "item",
+    name = "spark-plug",
+    icon = "__bzaluminum__/graphics/icons/spark-plug.png",
+    icon_size = 128,
+    subgroup = "intermediate-product",
+    order = "b[spark-plug]",
+    stack_size = 100,
+  },
+  {
+    type = "recipe",
+    name = "spark-plug",
+    category = "crafting",
+    order = "d[spark-plug]",
+    enabled = false,
+    energy_required = 2,
+    ingredients = {
+      {"alumina", 1},
+      {"copper-plate", 1},
+      {"iron-plate", 1},
+    },
+    results = {{"acsr-cable", 1}},
+  }
+})
+util.add_effect("engine", { type = "unlock-recipe", recipe = "spark-plug" })
+util.replace_ingredient("spark-plug", "iron-plate", "tungsten-plate")
+util.add_ingredient("spark-plug", "zirconia", 1)
+
+
+local aluminum_6061 = {}
+aluminum_6061["aluminum-plate"] = 18
+aluminum_6061["copper-plate"] = 1
+aluminum_6061["iron-plate"] = 1
+if mods.bztitanium or mods.Krastorio2 then
+  aluminum_6061["silicon"] = 1
+  aluminum_6061["aluminum-plate"] = aluminum_6061["aluminum-plate"] - 1
+end
+if mods.Krastorio2 then
+  aluminum_6061["rare-metals"] = 1
+  aluminum_6061["aluminum-plate"] = aluminum_6061["aluminum-plate"] - 1
+end
+data:extend({
+  {
+    type = "item",
+    name = "aluminum-6061",
+    icon = "__bzaluminum__/graphics/icons/aluminum-6061.png",
+    icon_size = 128,
+    subgroup = "raw-material",
+    order = "zz[aluminum-6061]",
+    stack_size = 100,
+  },
+  {
+    type = "recipe",
+    name = "aluminum-6061",
+    category = "crafting",
+    order = "zz[aluminum-6061]",
+    enabled = false,
+    energy_required = 100,
+    ingredients = {},
+    results = {{"aluminum-6061", 20}},
+  },
+  {
+    type = "technology",
+    name = "basic-alloys",
+    icon = "__bzaluminum__/graphics/icons/aluminum-6061.png",
+    icon_size = 128,
+    effects = {
+      { type = "unlock-recipe", recipe = "aluminum-6061" },
+    },
+    unit = {
+      count = 60, time = 30,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}},
+    },
+    prerequisites = {"advanced-material-processing"},
+    order = "b-b",
+  },
+})
+for item, count in pairs(aluminum_6061) do
+  util.add_ingredient("aluminum-6061", item, count)
+end
+util.add_prerequisite("basic-alloys", "silicon-processing")
+util.add_prerequisite("basic-alloys", "kr-silicon-processing")
+
+local aluminum_2219 = {}
+aluminum_2219["aluminum-plate"] = 16
+aluminum_2219["copper-plate"] = 4
+if mods.bztitanium then
+  aluminum_2219["titanium-plate"] = 2
+  aluminum_2219["aluminum-plate"] = aluminum_2219["aluminum-plate"] - 1
+  aluminum_2219["copper-plate"] = aluminum_2219["copper-plate"] - 1
+end
+if mods.bzzirconium then
+  aluminum_2219["zirconium-plate"] = 1
+  aluminum_2219["aluminum-plate"] = aluminum_2219["aluminum-plate"] - 1
+end
+if mods.Krastorio2 then
+  aluminum_2219["rare-metals"] = 1
+  aluminum_2219["aluminum-plate"] = aluminum_2219["aluminum-plate"] - 1
+end
+data:extend({
+  {
+    type = "item",
+    name = "aluminum-2219",
+    icon = "__bzaluminum__/graphics/icons/aluminum-2219.png",
+    icon_size = 128,
+    subgroup = "raw-material",
+    order = "zz[aluminum-2219]",
+    stack_size = 100,
+  },
+  {
+    type = "recipe",
+    name = "aluminum-2219",
+    category = "crafting",
+    order = "zz[aluminum-2219]",
+    enabled = false,
+    energy_required = 100,
+    ingredients = {},
+    results = {{"aluminum-2219", 20}},
+  },
+  {
+    type = "technology",
+    name = "aerospace-alloys",
+    icon = "__bzaluminum__/graphics/icons/aluminum-2219.png",
+    icon_size = 128,
+    effects = {
+      { type = "unlock-recipe", recipe = "aluminum-2219" },
+    },
+    unit = {
+      count = 60, time = 30,
+      ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}},
+    },
+    prerequisites = {"basic-alloys"},
+    order = "b-b",
+  },
+})
+for item, count in pairs(aluminum_2219) do
+  util.add_ingredient("aluminum-2219", item, count)
+end
+util.add_prerequisite("aerospace-alloys", "titanium-processing")
+util.add_prerequisite("aerospace-alloys", "zirconia-processing")
+
+
 
 end
