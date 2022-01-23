@@ -2,21 +2,23 @@ local util = require("data-util");
 
 
 util.replace_ingredient("car", "iron-plate", "aluminum-plate")
+util.add_prerequisite("railway", "basic-alloys")
 util.replace_ingredient("cargo-wagon", "iron-plate", "aluminum-6061")
 util.replace_some_ingredient("locomotive", "steel-plate", 10, "aluminum-6061", 20)
 
 util.add_prerequisite("turbo-bike", "basic-alloys")
 util.replace_ingredient("turbo-bike", "steel-plate", "aluminum-6061")
 
+util.replace_ingredient("Hualing-Truck", "iron-plate", "aluminum-plate") -- LJD
 util.add_prerequisite("trucks", "basic-alloys")
-util.replace_ingredient("dumper-truck", "iron-plate", "aluminum-6061")
+util.replace_ingredient("dumper-truck", "iron-plate", "aluminum-6061") -- Heavy Truck
 
 -- cargo ships
 util.add_prerequisite("automated_water_transport", "basic-alloys")
 
 util.replace_ingredient("floating-electric-pole", "iron-plate", "aluminum-plate")
 util.replace_ingredient("indep-boat", "steel-plate", "aluminum-plate")
-util.replace_ingredient("bouy", "iron-plate", "aluminum-plate")
+util.replace_ingredient("buoy", "iron-plate", "aluminum-plate")
 util.replace_ingredient("chain_buoy", "iron-plate", "aluminum-plate")
 
 util.replace_ingredient("port", "iron-plate", "aluminum-6061")
@@ -55,7 +57,7 @@ util.replace_ingredient("vehicle-flame-tank", "steel-plate", "aluminum-6061")
 util.replace_ingredient("vehicle-warden", "iron-plate", "aluminum-6061")
 util.replace_ingredient("vehicle-laser-tank", "steel-plate", "aluminum-6061")
 
-util.replace_ingredient("grappling-gun", "steel-plate", "aluminum-6061")
+util.replace_some_ingredient("grappling-gun", "steel-plate", 9, "aluminum-plate", 10)
 
 
 -- King Jo's
@@ -78,6 +80,8 @@ util.replace_ingredient("kj_utilitarian", "steel-plate", "aluminum-6061")
 util.replace_ingredient("kj_warrig", "steel-plate", "aluminum-6061")
 util.replace_ingredient("kj_wirbelwind", "steel-plate", "aluminum-6061")
 
+util.replace_ingredient("tiger-1", "steel-plate", "aluminum-6061")
+
 
 -- Dirigible
 util.add_prerequisite("dirigible-blimps", "basic-alloys")
@@ -90,6 +94,19 @@ util.replace_ingredient("crawler-locomotive", "steel-plate", "aluminum-6061")
 util.replace_ingredient("crawler-locomotive-wagon", "steel-plate", "aluminum-6061")
 util.replace_ingredient("crawler-bot-wagon", "steel-plate", "aluminum-6061")
 util.replace_ingredient("crawler-wagon", "steel-plate", "aluminum-6061")
+util.replace_ingredient("petro-locomotive-1", "steel-plate", "aluminum-6061")
 util.replace_ingredient("smelting-locomotive-1", "steel-plate", "aluminum-6061")
 util.replace_ingredient("smelting-locomotive-tender", "steel-plate", "aluminum-6061")
 util.replace_ingredient("smelting-wagon-1", "steel-plate", "aluminum-6061")
+
+-- Junk trains
+util.add_ingredient("JunkTrain", "aluminum-plate", 4)
+
+-- Realistic electric trains
+util.add_prerequisite("ret-electric-locomotives", "reinforced-cable")
+util.replace_ingredient("ret-electric-locomotive", "steel-plate", "aluminum-6061")
+util.replace_ingredient("ret-power-pole", "copper-plate", "acsr-cable")
+
+-- Electric trains
+util.replace_ingredient("deg-electric-locomotive", "steel-plate", "aluminum-6061")
+util.replace_ingredient("deg-battery-charging-station", "copper-cable", "aluminum-cable")
