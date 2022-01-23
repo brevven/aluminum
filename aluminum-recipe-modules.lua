@@ -1,6 +1,6 @@
 -- Enable prod modules for all aluminum plate and ore recipes
 
-recipes = {"alumina", "aluminum-plate", "aluminum-cable", "acsr-cable"}
+recipes = {"alumina", "aluminum-plate", "aluminum-cable", "acsr-cable", "spark-plug", "aluminum-alloy-2219", "aluminum-alloy-6061"}
 if mods["Krastorio2"] then
   table.insert(recipes, "enriched-aluminum-plate")
   table.insert(recipes, "enriched-aluminum")

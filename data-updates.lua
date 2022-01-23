@@ -1,4 +1,6 @@
 require("aluminum-recipe-updates")
+require("aluminum-recipe-updates-lds")
+require("aluminum-recipe-updates-transport")
 require("aluminum-matter")
 -- require("omni")
 require("map-gen-preset-updates")
