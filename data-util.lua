@@ -89,7 +89,12 @@ function util.add_effect(technology_name, effect)
   local technology = data.raw.technology[technology_name]
   if technology then
     if not technology.effects then technology.effects = {} end
-    table.insert(technology.effects, effect)
+    if effect and effect.type == "unlock-recipe" then
+      if not data.raw.recipe[effect.recipe] then
+        return
+      end
+      table.insert(technology.effects, effect)
+    end
   end
 end
 
