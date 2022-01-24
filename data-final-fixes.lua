@@ -14,7 +14,7 @@ if mods["space-exploration"] then
   data.raw.recipe["aluminum-plate"].subgroup = "plates"
 
   -- core mining balancing
-  util.add_to_product("se-core-fragment-omni", "aluminum-ore", -3)
+  util.add_to_product("se-core-fragment-omni", "aluminum-ore", -2)
 end
 
 if mods.bzsilicon then
