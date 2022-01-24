@@ -7,6 +7,11 @@ require("map-gen-preset-updates")
 require("strange-matter")
 
 local util = require("data-util");
+if mods["space-exploration"] then 
+  se_delivery_cannon_recipes["aluminum-ore"] = {name= "aluminum-ore"}
+  se_delivery_cannon_recipes["alumina"] = {name= "alumina"}
+  se_delivery_cannon_recipes["aluminum-plate"] = {name= "aluminum-plate"}
+end
 
 if data.raw.resource["copper-ore"] then
   if mods["space-exploration"] then
