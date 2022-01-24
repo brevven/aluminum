@@ -1,5 +1,6 @@
 local util = require("data-util");
 -- LDS
+util.add_prerequisite("low-density-structure", "aerospace-alloys")
 util.remove_ingredient("low-density-structure", "copper-plate")
 util.remove_ingredient("low-density-structure", "steel-plate")
 util.remove_ingredient("low-density-structure", "titanium-plate")
