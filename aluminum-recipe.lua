@@ -192,6 +192,14 @@ data:extend({
   }
 })
 
+local plug = {
+  {"alumina", 1},
+  {"copper-plate", 1},
+  {"iron-plate", 1}, -- replace with tungsten plate later
+}
+if mods.bzzirconium then 
+  table.insert(plug, {"zirconia", 1})
+end
 data:extend({
   {
     type = "item",
@@ -209,17 +217,12 @@ data:extend({
     order = "d[spark-plug]",
     enabled = false,
     energy_required = 2,
-    ingredients = {
-      {"alumina", 1},
-      {"copper-plate", 1},
-      {"iron-plate", 1},
-    },
-    results = {{"acsr-cable", 1}},
+    ingredients = plug,
+    results = {{"spark-plug", #plug}},
   }
 })
 util.add_effect("engine", { type = "unlock-recipe", recipe = "spark-plug" })
 util.replace_ingredient("spark-plug", "iron-plate", "tungsten-plate")
-util.add_ingredient("spark-plug", "zirconia", 1)
 
 
 local aluminum_6061 = {}
