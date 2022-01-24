@@ -56,3 +56,57 @@ for i, item in pairs(data.raw.item) do
 end
 
 
+-- Glass
+-- k2
+util.replace_some_ingredient("glass", "sand", 3, "alumina", 1)
+-- aai
+util.multiply_recipe("glass-from-sand", 4)
+util.replace_some_ingredient("glass-from-sand", "sand", 3, "alumina", 1)
+-- se
+util.replace_some_ingredient("se-glass-vulcanite", "sand", 3, "alumina", 1)
+-- End glass
+
+
+-- k2
+if mods.Krastorio2 then
+  util.replace_some_ingredient("inserter-parts", "iron-stick", 2, "aluminum-plate", 1)
+
+  util.replace_ingredient("battery-equipment", "iron-plate", "aluminum-plate")
+  util.replace_ingredient("night-vision-equipment", "iron-plate", "aluminum-plate")
+  util.replace_ingredient("big-battery-equipment", "iron-plate", "aluminum-plate")
+  util.replace_ingredient("personal-submachine-laser-defense-mk1-equipment", "iron-plate", "aluminum-plate")
+
+  util.replace_ingredient("additional-engine", "steel-plate", "aluminum-6601")
+  util.replace_ingredient("advanced-additional-engine", "steel-plate", "aluminum-6601")
+  util.replace_ingredient("vehicle-roboport", "steel-plate", "aluminum-6601")
+
+
+  util.add_ingredient("kr-research-server", "aluminum-plate", 8)
+  util.add_ingredient("kr-atmospheric-condenser", "aluminum-plate", 10)
+  util.add_ingredient("kr-filtration-plant", "aluminum-plate", 10)
+  util.add_ingredient("kr-small-roboport", "aluminum-6061", 10)
+  util.add_ingredient("kr-large-roboport", "aluminum-6061", 20)
+  util.add_ingredient("assembling-machine-1", "aluminum-plate", 4)
+end
+
+
+-- aai
+if mods["aai-industry"] then
+  util.replace_ingredient("burner-assembling-machine", "iron-plate", "aluminum-plate")
+  util.replace_ingredient("small-iron-electric-pole", "copper-cable", "aluminum-cable")
+  util.replace_ingredient("medium-electric-pole", "copper-cable", "acsr-cable")
+  util.set_ingredient("medium-electric-pole", "acsr-cable", 2)
+  util.replace_ingredient("big-electric-pole", "copper-cable", "acsr-cable")
+  util.set_ingredient("big-electric-pole", "acsr-cable", 5)
+  util.replace_ingredient("substation", "copper-cable", "acsr-cable")
+  util.set_ingredient("substation", "acsr-cable", 10)
+end
+
+if mods["space-exploration"] then
+  util.replace_ingredient("se-space-transport-belt", "copper-plate", "aluminum-2219")
+
+  util.add_ingredient("se-experimental-alloys-data", "aluminum-plate", 1)
+  util.add_to_product("se-experimental-alloys-data", "se-experimental-alloys-data", 1)
+  util.add_to_product("se-experimental-alloys-data", "se-scrap", 1)
+  util.add_to_ingredient("se-experimental-alloys-data", "se-empty-data", 1)
+end
