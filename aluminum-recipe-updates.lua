@@ -104,6 +104,7 @@ end
 
 if mods["space-exploration"] then
   util.replace_ingredient("se-space-transport-belt", "copper-plate", "aluminum-2219")
+  util.add_ingredient("se-energy-beam-defence", "acsr-cable", 20)
 
   util.add_ingredient("se-experimental-alloys-data", "aluminum-plate", 1)
   util.add_to_product("se-experimental-alloys-data", "se-experimental-alloys-data", 1)
