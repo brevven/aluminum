@@ -54,7 +54,7 @@ data:extend({
     icons = (mods["Krastorio2"] and
         {
           { icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128},
-          { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128, scale=0.25, shift= {-8, -8}},
+          { icon = "__bzaluminum__/graphics/icons/alumina.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
         } or {
           { icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128},
         }
