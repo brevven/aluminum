@@ -80,7 +80,18 @@ util.replace_ingredient("kj_utilitarian", "steel-plate", "aluminum-6061")
 util.replace_ingredient("kj_warrig", "steel-plate", "aluminum-6061")
 util.replace_ingredient("kj_wirbelwind", "steel-plate", "aluminum-6061")
 
+util.replace_ingredient("kj_bf109", "iron-plate", "aluminum-plate")
+util.replace_ingredient("kj_ju52", "iron-plate", "aluminum-plate")
+util.replace_ingredient("kj_b17", "iron-plate", "aluminum-plate")
+util.replace_ingredient("kj_ju87", "iron-plate", "aluminum-plate")
+util.replace_ingredient("kj_jug38", "iron-plate", "aluminum-plate")
+util.replace_ingredient("kj_ho229", "iron-plate", "aluminum-plate")
+util.replace_ingredient("kj_b2", "steel-plate", "aluminum-plate")
+
+
+
 util.replace_ingredient("tiger-1", "steel-plate", "aluminum-6061")
+
 
 
 -- Dirigible
