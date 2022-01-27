@@ -9,6 +9,9 @@ require("aluminum-burner-phase")
 local util = require("data-util");
 
 if mods["space-exploration"] then 
+  -- Must be in final fixes
+  util.replace_ingredient("rocket-control-unit", "iron-plate", "aluminum-plate")
+
   -- Organization
   data.raw.item["aluminum-plate"].subgroup = "plates"
   data.raw.recipe["aluminum-plate"].subgroup = "plates"
