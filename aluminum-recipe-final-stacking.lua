@@ -11,6 +11,21 @@ if deadlock then
   deadlock.add_stack("spark-plug", "__bzaluminum__/graphics/icons/stacked/spark-plug-stacked.png" , "deadlock-stacking-2", 128)
   deadlock.add_stack("aluminum-6061", "__bzaluminum__/graphics/icons/stacked/aluminum-6061-stacked.png" , "deadlock-stacking-2", 128)
   deadlock.add_stack("aluminum-2219", "__bzaluminum__/graphics/icons/stacked/aluminum-2219-stacked.png" , "deadlock-stacking-3", 128)
+  deadlock.add_stack("ti-sapphire", "__bzaluminum__/graphics/icons/stacked/ti-sapphire-stacked.png" , "deadlock-stacking-3", 128)
+
+  if mods.Krastorio2 then
+    util.set_icons("deadlock-stacks-stack-automation-core", {
+      {icon="__bzaluminum__/graphics/icons/stacked/automation-core-stacked.png", icon_size=64},
+      {icon="__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-d-64.png", icon_size=64, scale=.25},
+    })
+    util.set_icons("deadlock-stacks-unstack-automation-core", {
+      {icon="__bzaluminum__/graphics/icons/stacked/automation-core-stacked.png", icon_size=64},
+      {icon="__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-u-64.png", icon_size=64, scale=.25},
+    })
+    util.set_item_icons("deadlock-stack-automation-core", {
+      {icon="__bzaluminum__/graphics/icons/stacked/automation-core-stacked.png", icon_size=64},
+    })
+  end
 end
 
 -- Deadlock crating recipes
@@ -23,5 +38,6 @@ if deadlock_crating then
   deadlock_crating.add_crate("spark-plug", "deadlock-crating-2")
   deadlock_crating.add_crate("aluminum-6061", "deadlock-crating-2")
   deadlock_crating.add_crate("aluminum-2219", "deadlock-crating-3")
+  deadlock_crating.add_crate("ti-sapphire", "deadlock-crating-3")
 end
 
