@@ -117,8 +117,6 @@ util.replace_ingredient("chute-miniloader", "iron-plate", "aluminum-plate")
 
 -- aai
 if mods["aai-industry"] then
-  util.replace_ingredient("burner-assembling-machine", "iron-plate", "aluminum-plate")
-  util.replace_ingredient("small-iron-electric-pole", "copper-cable", "aluminum-cable")
   util.replace_ingredient("medium-electric-pole", "copper-cable", "acsr-cable")
   util.set_ingredient("medium-electric-pole", "acsr-cable", 2)
   util.replace_ingredient("big-electric-pole", "copper-cable", "acsr-cable")
