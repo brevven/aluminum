@@ -28,7 +28,9 @@ util.replace_some_ingredient("oil_tanker", "steel-plate", 150, "aluminum-6061", 
 -- aircraft
 util.replace_ingredient("gunship", "steel-plate", "aluminum-2219")
 util.replace_ingredient("gunship", util.titanium_plate, "aluminum-2219")
+util.replace_ingredient("gunship", "iron-plate", "aluminum-6061")
 util.replace_ingredient("cargo-plane", "steel-plate", "aluminum-2219")
+util.replace_ingredient("cargo-plane", "iron-plate", "aluminum-6061")
 util.replace_ingredient("cargo-plane", util.titanium_plate, "aluminum-2219")
 util.replace_ingredient("flying-fortress", "steel-plate", "aluminum-2219")
 util.replace_ingredient("cargo-plane", util.titanium_plate, "aluminum-2219")
