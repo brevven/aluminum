@@ -11,7 +11,7 @@
       "bzfoundry",
       "? bztitanium >= 1.0.3",
       "? bzlead",
-      "? bzzirconium >= 0.5.3",
+      "? bzzirconium >= 0.5.4",
       "? bztungsten >= 0.5.4",
       "? bzcarbon >= 0.1.2",
       "? space-exploration",
