@@ -129,8 +129,12 @@ data:extend({
   {
     type = "technology",
     name = "copper-processing",
-    icon = "__base__/graphics/icons/copper-plate.png",
-    icon_size = 64, icon_mipmaps=4,
+    icons = {
+      {
+        icon = "__base__/graphics/icons/copper-plate.png",
+        icon_size = 64, icon_mipmaps=4,
+      },
+    },
     effects = {
       { type = "unlock-recipe", recipe = "copper-plate" },
       { type = "unlock-recipe", recipe = "copper-cable" },
@@ -198,7 +202,7 @@ data:extend({
     name = "acsr-cable",
     category = "crafting",
     order = "d[acsr-cable]",
-    enabled = true,
+    enabled = false,
     energy_required = 0.5,
     ingredients = {{"aluminum-cable", 1}, {"steel-plate", 1}},
     results = {{"acsr-cable", 1}},
@@ -242,7 +246,7 @@ local aluminum_6061 = {}
 aluminum_6061["aluminum-plate"] = 18
 aluminum_6061["copper-plate"] = 1
 aluminum_6061["iron-plate"] = 1
-if mods.bztitanium or mods.Krastorio2 then
+if mods.bzsilicon or mods.Krastorio2 then
   aluminum_6061["silicon"] = 1
   aluminum_6061["aluminum-plate"] = aluminum_6061["aluminum-plate"] - 1
 end
