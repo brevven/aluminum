@@ -9,16 +9,17 @@
     "dependencies": [
       "base >= 1.1.0",
       "bzfoundry",
-      "? bztitanium",
+      "? bztitanium >= 1.0.3",
       "? bzlead",
       "? bzzirconium >= 0.5.3",
       "? bztungsten >= 0.5.4",
+      "? bzcarbon >= 0.1.2",
       "? space-exploration",
       "? aai-industry",
       "? Krastorio2",
       "? deadlock-beltboxes-loaders",
       "? DeadlockCrating"
     ],
-    "description": "Adds aluminum, alumina, cables, alloys and more to the game\n\nCompatible with Krastorio 2 and Space Exploration. A standalone piece of BZ Mods."
+    "description": "Adds aluminum, alumina, cables, alloys and more to the game.\n\nCompatible with Krastorio 2 and Space Exploration. A standalone piece of BZ Mods."
 }
 
