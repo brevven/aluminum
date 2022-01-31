@@ -2,4 +2,6 @@
 Version: 0.0.1
 Date: 2022-01-29
   Features:
-    - Alpha version
+    - Alpha release. Adds aluminum, alumina, cables, alloys, etc.
+    - Compatible with Krastorio 2
+    - Compatible with Space Exploration
