@@ -113,6 +113,7 @@ if mods.Krastorio2 then
   util.add_ingredient("kr-matter-plant", "ti-sapphire", 5)
 end
 
+util.replace_ingredient("chute-miniloader", "iron-plate", "aluminum-plate")
 
 -- aai
 if mods["aai-industry"] then
@@ -127,6 +128,8 @@ if mods["aai-industry"] then
 end
 
 if mods["space-exploration"] then
+  util.add_product("se-scrap-recycling", {name="aluminum-ore", amount=1, probability=0.1})
+
   util.replace_ingredient("se-adaptive-armour-equipment-1", "titanium-plate", "alumina")
   util.replace_ingredient("se-adaptive-armour-equipment-1", "steel-plate", "alumina")
 
@@ -149,3 +152,15 @@ if mods["space-exploration"] then
   util.add_ingredient("se-space-astrometrics-laboratory", "ti-sapphire", 1)
   util.add_ingredient("se-space-hypercooler", "ti-sapphire", 6)
 end
+
+
+util.replace_ingredient("Schall-fast-inserter-R1", "iron-plate", "aluminum-plate")
+util.replace_ingredient("Schall-fast-inserter-R2", "iron-plate", "aluminum-plate")
+util.replace_ingredient("Schall-fast-inserter-R3", "iron-plate", "aluminum-plate")
+util.replace_ingredient("Schall-fast-inserter-R4", "iron-plate", "aluminum-plate")
+util.replace_ingredient("Schall-fast-inserter-R5", "iron-plate", "aluminum-plate")
+util.replace_ingredient("very-long-handed-inserter", "iron-plate", "aluminum-plate")
+util.replace_ingredient("FastLongInserters_fast-inserter", "iron-plate", "aluminum-plate")
+util.replace_ingredient("FastLongInserters_filter-inserter", "iron-plate", "aluminum-plate")
+util.replace_ingredient("FastLongInserters_stack-inserter", "iron-plate", "aluminum-plate")
+util.replace_ingredient("FastLongInserters_stack-filter-inserter", "iron-plate", "aluminum-plate")
