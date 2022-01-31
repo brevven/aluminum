@@ -1,6 +1,7 @@
 -- Aluminum smelting
 
 local util = require("data-util");
+local futil = require("util");
 
 local alumina_results = {}
 
@@ -339,6 +340,42 @@ end
 util.add_prerequisite("aerospace-alloys", "titanium-processing")
 util.add_prerequisite("aerospace-alloys", "zirconia-processing")
 
+if mods.bztitanium then
+  data:extend({
+    {
+      type = "item",
+      name = "ti-sapphire",
+      icon = "__bzaluminum__/graphics/icons/ti-sapphire.png",
+      icon_size = 128,
+      subgroup = "intermediate-product",
+      order = "zz[sapphire-ti]",
+      stack_size = 50,
+    },
+    {
+      type = "recipe",
+      name = "ti-sapphire",
+      icon = "__bzaluminum__/graphics/icons/ti-sapphire.png",
+      icon_size = 128,
+      category = "chemistry",
+      subgroup = "intermediate-product",
+      order = "zz[sapphire-ti]",
+      enabled = false,
+      energy_required = 10,
+      ingredients = {
+        {"alumina", 10},
+        {util.titanium_plate, 1},
+        {type="fluid", name=mods.Krastorio2 and "ammonia" or "sulfuric-acid", amount=5},
+      },
+      results = {{"ti-sapphire", 1}},
+    },
+  })
+  util.add_effect("laser", {type="unlock-recipe", recipe="ti-sapphire"})
+  util.add_prerequisite("laser", util.titanium_processing)
+  if mods.bzcarbon then
+    util.add_ingredient("ti-sapphire", "diamond", 1)
+    util.add_product("ti-sapphire", {type="item", name="diamond", amount=1, probability=0.8})
+  end
+end
 
 
 end
