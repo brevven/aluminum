@@ -1,15 +1,17 @@
 local util = require("data-util");
 
-
-
--- major changes
+-- Big vanilla changes
 util.multiply_recipe("sulfur", 2)
 util.replace_some_ingredient("sulfur", "petroleum-gas", 10, "alumina", 1)
-
+util.replace_ingredient("inserter", "iron-plate", "aluminum-plate")
+util.replace_ingredient("burner-inserter", "iron-plate", "aluminum-plate")
 util.replace_ingredient("transport-belt", "iron-plate", "aluminum-plate")
 util.replace_ingredient("underground-belt", "iron-plate", "aluminum-plate")
 util.replace_ingredient("splitter", "iron-plate", "aluminum-plate")
+util.replace_ingredient("rocket", "iron-plate", "aluminum-plate")
+util.replace_ingredient("loader", "iron-plate", "aluminum-plate")
 
+util.replace_ingredient("small-lamp", "copper-cable", "aluminum-cable")
 util.replace_ingredient("radar", "iron-plate", "aluminum-plate")
 util.replace_ingredient("steam-engine", "iron-plate", "aluminum-plate")
 util.replace_ingredient("storage-tank", "iron-plate", "aluminum-plate")
