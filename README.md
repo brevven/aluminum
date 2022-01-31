@@ -26,7 +26,7 @@ See changelog.txt
 "And I am nothing of a builder / But here I dreamt I was an architect" - *Colin Meloy*
 
 ----
-_Note -- This mod is currently an alpha. It is still being tested. There may be deadlocks to be fixed. Major changes may yet come._
+_WARNING -- This mod is currently an alpha. It is still being tested. There may be deadlocks to be fixed. Major changes may yet come._
 
 ----
 
@@ -36,7 +36,7 @@ Largely retaining the vanilla factorio feel, this mod provides a small rework to
 
 If used alongside most of the other BZ mods, the game will become quite a bit more complex. As always with BZ resource mods, the game is not extended much past the rocket launch, instead the game is a lot wider up to that point. For a post-rocket-launch extension, consider using this mod alongside Krastorio2, Space Exploration, or both.
 
-If you want a vanilla-esque game with some tweaks, try vanilla with this mod, or perhaps a less complex one like [Titanium](https://mods.factorio.com/mod/bztitanium) or [Lead](https://mods.factorio.com/mod/bzlead).
+If you want a vanilla-esque game with some tweaks, try this mod, or perhaps a less complex one like [Titanium](https://mods.factorio.com/mod/bztitanium) or [Lead](https://mods.factorio.com/mod/bzlead).
 
 ### Details
 
