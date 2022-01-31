@@ -25,6 +25,13 @@ util.add_ingredient("tank", "spark-plug", 1)
 
 util.add_prerequisite("engine", "basic-alloys")
 
+if mods.bztitanium then
+  util.remove_ingredient("laser-turret", "diamond")
+  util.add_ingredient("laser-turret", "ti-sapphire", 1)
+else
+  util.add_ingredient("laser-turret", "alumina", 5)
+end
+util.replace_some_ingredient("distractor-capsule", "defender-capsule", 1, "ti-sapphire", 1)
 
 -- "Mall" changes
 util.replace_ingredient("fast-inserter", "iron-plate", "aluminum-plate")
@@ -100,6 +107,10 @@ if mods.Krastorio2 then
   util.add_ingredient("kr-small-roboport", "aluminum-6061", 10)
   util.add_ingredient("kr-large-roboport", "aluminum-6061", 20)
   util.add_ingredient("assembling-machine-1", "aluminum-plate", 4)
+
+  util.add_ingredient("kr-laser-artillery-turret", "ti-sapphire", 4)
+  util.add_ingredient("kr-matter-assembler", "ti-sapphire", 8)
+  util.add_ingredient("kr-matter-plant", "ti-sapphire", 5)
 end
 
 
@@ -133,4 +144,8 @@ if mods["space-exploration"] then
   util.add_to_ingredient("se-experimental-alloys-data", "se-empty-data", 1)
 
   util.add_ingredient("se-electrical-shielding-data", "alumina", 1)
+
+  util.add_ingredient("se-space-laser-laboratory", "ti-sapphire", 10)
+  util.add_ingredient("se-space-astrometrics-laboratory", "ti-sapphire", 1)
+  util.add_ingredient("se-space-hypercooler", "ti-sapphire", 6)
 end
