@@ -30,17 +30,17 @@ _Note -- This mod is currently an alpha. It is still being tested. There may be 
 
 ----
 
-Adds aluminum ore, alumina, aluminum plates, cables, alloys, spark plugs, and more to the game. Requires the [Foundry](https://mods.factorio.com/mod/bzfoundry) building.
+Adds aluminum ore, alumina, aluminum plates, cables, alloys, spark plugs, and more to the game.
 
-Largely retaining the vanilla factorio feel, this mod provides a small rework to the burner phase early game. Aluminum replaces copper in most early recipes. Copper and green circuits are locked behind research and not needed until electronics.
+Largely retaining the vanilla factorio feel, this mod provides a small rework to the burner phase early game, as well as many later recipe updates. It also requires the [Foundry](https://mods.factorio.com/mod/bzfoundry) building.
 
-If using alongside [Lead](https://mods.factorio.com/mod/bzlead), you'll need to hoard copper byproduct until you need it. If used alongside most of the other BZ mods, the game will become quite a bit more complex. As always with BZ resource mods, the game is not extended much past the rocket launch, instead the game is a lot wider up to that point.  For a post-rocket-launch game, consider using this mod alongside Krastorio2, Space Exploration, or both.
+If used alongside most of the other BZ mods, the game will become quite a bit more complex. As always with BZ resource mods, the game is not extended much past the rocket launch, instead the game is a lot wider up to that point. For a post-rocket-launch extension, consider using this mod alongside Krastorio2, Space Exploration, or both.
 
-If you want a vanilla-esque game with a just few tweaks, try with just this mod, or a simpler one like [Titanium](https://mods.factorio.com/mod/bztitanium) or [Lead](https://mods.factorio.com/mod/bzlead).
+If you want a vanilla-esque game with some tweaks, try vanilla with this mod, or perhaps a less complex one like [Titanium](https://mods.factorio.com/mod/bztitanium) or [Lead](https://mods.factorio.com/mod/bzlead).
 
 ### Details
 
-Aluminum ore can be smelted to alumina. It also outputs silica if using [Silica & Silicon](https://mods.factorio.com/mod/bzsilicon). Alumina is used in some recipes and can be smelted to aluminum plates, which is used for aluminum cable and ACSR cable. Two types of alloys are later unlocked using aluminum and a variety of other resources.
+Aluminum ore can be smelted to alumina. It also outputs silica if using [Silica & Silicon](https://mods.factorio.com/mod/bzsilicon). Alumina is used in some recipes and can be smelted to aluminum plates, which is used for aluminum cable and ACSR cable. Aluminum replaces copper in most early recipes. Copper and green circuits are locked behind research and not needed until electronics. Alloys are later unlocked consisting of aluminum and a variety of other resources. Warning, if using alongside [Lead](https://mods.factorio.com/mod/bzlead), you'll need to hoard copper byproduct until you research copper processing.
 
 Supported compatible mods:
 
@@ -48,7 +48,7 @@ Supported compatible mods:
 - Krastorio 2 & Rich Rocks Requiem
 - Several smaller mods like Deadlock Stacking, Deadlock Crating, etc.
 
-Coming soon: like FE+, 5Dim's, ModMash, etc.
+Coming soon: FE+, 5Dim's, ModMash, etc.
 Planned but not yet supported: RSO, Omnimatter, Simple Compress, and much more.
 
 Many other mods are compatible, but not yet fully supported. Compatibility suggestions always appreciated.
@@ -59,15 +59,14 @@ Special thanks to
 - The community, for all the suggestions, feedback, and bug reports!
 - [snouz](https://mods.factorio.com/user/snouz) (recolored ore graphics, thumbnail style)
 - [FreeSVG/OpenClipart](https://freesvg.org/spark-plug-vector-image) for spark plug: 
-- Krastorio2 team for automation-core icons (Licensed under GNU LGPL v3.0)
-
-Localization thanks to
+- Krastorio2 team for original automation-core icons (Licensed under GNU LGPL v3.0)
 
 ----
 
 ### Detailed list of changes (incomplete)
 
 #### Vanilla
+
 - Most pre-electronics recipes, replaces copper or green circuits
 - All power pole recipes, replaces copper
 - Tier 1 belt items, some inserters
@@ -77,21 +76,21 @@ Localization thanks to
 - Engine units and flamethrowers use spark plugs
 - Rocket silo uses multiple ingredients
 
-
 #### Krastorio 2
+
 - Most pre-electronics recipes, replaces copper.
 - Glass (low percentage alumina)
 - Vehicle equipment
 - More structures, etc
 
 #### Space Exploration & AAI
-- Again, most pre-electronics recipes.
+
+- Most pre-electronics recipes.
 - Glass (low percentage alumina)
 - More structures
 - Some data
 
-
-
 #### Other
 
 - Tons of ground and air vehicles. (Will continue to add support for more)
+- Some modded inserters
