@@ -6,6 +6,22 @@ if mods["space-exploration"] then
   se_delivery_cannon_recipes["alumina"] = {name= "alumina"}
   se_delivery_cannon_recipes["aluminum-plate"] = {name= "aluminum-plate"}
 
+  data:extend({
+  {
+    type = "recipe",
+    icons = {
+      { icon = "__base__/graphics/icons/landfill.png", icon_size = 64, icon_mipmaps = 3 },
+      { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, scale = 0.25},
+    },
+    name = "landfill-aluminum-ore",
+    category = "hard-recycling",
+    order = "z-b-aluminum",
+    subgroup = "terrain",
+    result = "landfill",
+    ingredients = {{"aluminum-ore", 50}},
+  }
+  })
+
 
   data:extend({
   {
