@@ -113,6 +113,18 @@ data:extend({
   },
 })
 
+if mods.bzsilicon then
+  landfill = futil.table.deepcopy(data.raw.recipe["landfill"])
+  landfill.name = "landfill-silica"
+  data:extend({landfill})
+  util.replace_some_ingredient("landfill-silica", "stone", 10,
+                               "silica", mods["space-exploration"] and 100 or 20)
+  util.remove_prerequisite("landfill", "logistic-science-pack")
+  util.set_tech_recipe("landfill", {{"automation-science-pack", 1}})
+  util.add_effect("landfill", {type="unlock-recipe", recipe="landfill-silica"})
+end
+
+
 data:extend({
   {
     type = "technology",
