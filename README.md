@@ -58,7 +58,7 @@ Special thanks to
 
 - The community, for all the suggestions, feedback, and bug reports!
 - [snouz](https://mods.factorio.com/user/snouz) (recolored ore graphics, thumbnail style)
-- [FreeSVG/OpenClipart](https://freesvg.org/spark-plug-vector-image) for spark plug: 
+- [FreeSVG/OpenClipart](https://freesvg.org/spark-plug-vector-image) for spark plug
 - Krastorio2 team for original automation-core icons (Licensed under GNU LGPL v3.0)
 
 ----
