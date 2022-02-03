@@ -1,6 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2022-02-02
+  Fixes:
+    - Tech tree deadlock fix for K2+AAI
+---------------------------------------------------------------------------------------------------
 Version: 0.0.1
-Date: 2022-01-29
+Date: 2022-01-31
   Features:
     - Alpha release. Adds aluminum, alumina, cables, alloys, etc.
     - Compatible with Krastorio 2

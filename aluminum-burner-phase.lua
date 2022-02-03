@@ -6,6 +6,7 @@ if not mods.Krastorio2 and not mods["aai-industry"] then
   util.replace_ingredient("electric-mining-drill", "electronic-circuit", "aluminum-cable")
   util.replace_ingredient("assembling-machine-1", "electronic-circuit", "aluminum-cable")
   util.replace_ingredient("radar", "electronic-circuit", "aluminum-cable")
+  util.replace_ingredient("splitter", "electronic-circuit", "aluminum-cable")
 
   -- Keep repair pack raw ingredients close to the same
   util.remove_ingredient("repair-pack", "electronic-circuit")
@@ -32,6 +33,8 @@ if mods.Krastorio2 then
 
   util.remove_ingredient("basic-tech-card", "copper-cable")
   util.add_ingredient("basic-tech-card", "aluminum-cable", 1)
+
+  util.add_prerequisite("automation-science-pack", "copper-processing")
 end
 
 if mods["aai-industry"] then
@@ -43,6 +46,29 @@ if mods["aai-industry"] then
   util.replace_ingredient("motor", "iron-plate", "aluminum-plate")
   util.replace_ingredient("repair-pack", "copper-plate", "aluminum-plate")
   util.replace_ingredient("burner-lab", "copper-plate", "aluminum-plate")
+end
+
+if mods["aai-industry"] and mods.Krastorio2 then
+  util.remove_prerequisite("copper-processing", "automation")
+  util.add_prerequisite("copper-processing", "electricity")
+
+  util.remove_prerequisite("logistics", "automation-science-pack")
+  util.remove_prerequisite("fuel-processing", "automation-science-pack")
+  util.remove_prerequisite("electricity", "automation-science-pack")
+  util.remove_prerequisite("kr-sentinel", "automation-science-pack")
+  util.set_tech_recipe("logistics", {{"basic-tech-card", 1}})
+  util.set_tech_recipe("fuel-processing", {{"basic-tech-card", 1}})
+  util.set_tech_recipe("electricity", {{"basic-tech-card", 1}})
+  util.set_tech_recipe("kr-sentinel", {{"basic-tech-card", 1}})
+  util.set_tech_recipe("kr-basic-fluid-handling", {{"basic-tech-card", 1}})
+
+  util.add_prerequisite("deadlock-stacking-1", "automation-science-pack")
+  util.add_prerequisite("kr-radar", "automation-science-pack")
+  util.add_prerequisite("automation", "automation-science-pack")
+  util.add_prerequisite("kr-steam-engine", "automation-science-pack")
+
+  -- TODO basic fluid handling and grpahite
+
 end
  
 
