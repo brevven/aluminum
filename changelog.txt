@@ -2,7 +2,7 @@
 Version: 0.0.3
 Date: 2022-02-12
   Fixes:
-    - List mod setting fixes
+    - Recipe list mod setting fixes
   Changes:
     - Minor SE recipe updates
     - More recipe compatibility tweaks
