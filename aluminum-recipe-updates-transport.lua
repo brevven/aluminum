@@ -103,14 +103,39 @@ util.replace_ingredient("dirigible-vacuum", "iron-plate", "aluminum-6061")
 
 
 -- Angel's Mass Transit
+util.add_prerequisite("angels-crawler-train-3", "aerospace-alloys")
+util.add_prerequisite("angels-petro-train-3", "aerospace-alloys")
+util.add_prerequisite("angels-smelting-train-3", "aerospace-alloys")
+util.remove_prerequisite("angels-crawler-train-3", "low-density-structure")
+util.remove_prerequisite("angels-petro-train-3", "low-density-structure")
+util.remove_prerequisite("angels-smelting-train-3", "low-density-structure")
+
 util.replace_ingredient("crawler-locomotive", "steel-plate", "aluminum-6061")
 util.replace_ingredient("crawler-locomotive-wagon", "steel-plate", "aluminum-6061")
 util.replace_ingredient("crawler-bot-wagon", "steel-plate", "aluminum-6061")
 util.replace_ingredient("crawler-wagon", "steel-plate", "aluminum-6061")
+util.replace_ingredient("crawler-locomotive-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("crawler-locomotive-wagon-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("crawler-bot-wagon-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("crawler-wagon-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("crawler-locomotive-3", "low-density-structure", "aluminum-2219")
+util.replace_ingredient("crawler-locomotive-wagon-3", "low-density-structure", "aluminum-2219")
+util.replace_ingredient("crawler-bot-wagon-3", "low-density-structure", "aluminum-2219")
+util.replace_ingredient("crawler-wagon-3", "low-density-structure", "aluminum-2219")
+
 util.replace_ingredient("petro-locomotive-1", "steel-plate", "aluminum-6061")
+util.replace_ingredient("petro-locomotive-1-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("petro-locomotive-1-3", "low-density-structure", "aluminum-2219")
+
 util.replace_ingredient("smelting-locomotive-1", "steel-plate", "aluminum-6061")
 util.replace_ingredient("smelting-locomotive-tender", "steel-plate", "aluminum-6061")
 util.replace_ingredient("smelting-wagon-1", "steel-plate", "aluminum-6061")
+util.replace_ingredient("smelting-locomotive-1-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("smelting-locomotive-tender-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("smelting-wagon-1-2", "steel-plate", "aluminum-6061")
+util.replace_ingredient("smelting-locomotive-1-3", "low-density-structure", "aluminum-2219")
+util.replace_ingredient("smelting-locomotive-tender-3", "low-density-structure", "aluminum-2219")
+util.replace_ingredient("smelting-wagon-1-3", "low-density-structure", "aluminum-2219")
 
 -- Junk trains
 util.add_ingredient("JunkTrain", "aluminum-plate", 4)
