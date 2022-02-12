@@ -137,6 +137,7 @@ if mods["space-exploration"] then
   util.replace_some_ingredient("se-rocket-launch-pad", "concrete", 500, "alumina", 500)
   util.replace_some_ingredient("se-rocket-launch-pad", "steel-plate", 500, "aluminum-plate", 500)
   util.add_ingredient("se-rocket-launch-pad", "spark-plug", 100)
+  util.add_ingredient("se-fluid-burner-generator", "spark-plug", 2)
 
 
   util.add_ingredient("se-experimental-alloys-data", "aluminum-plate", 1)
