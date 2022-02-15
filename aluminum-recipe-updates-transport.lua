@@ -1,7 +1,9 @@
 local util = require("data-util");
 
 
-util.replace_ingredient("car", "iron-plate", "aluminum-plate")
+util.replace_ingredient("car", "iron-plate", "aluminum-6061")
+util.replace_some_ingredient("car", "steel-plate", 3, "aluminum-6061", 6) -- if iron was removed from car already
+util.add_prerequisite("automobilism", "basic-alloys")
 util.add_prerequisite("railway", "basic-alloys")
 util.replace_ingredient("cargo-wagon", "iron-plate", "aluminum-6061")
 util.replace_some_ingredient("locomotive", "steel-plate", 10, "aluminum-6061", 20)
@@ -10,6 +12,7 @@ util.add_prerequisite("turbo-bike", "basic-alloys")
 util.replace_ingredient("turbo-bike", "steel-plate", "aluminum-6061")
 
 util.replace_ingredient("Hualing-Truck", "iron-plate", "aluminum-plate") -- LJD
+util.replace_ingredient("Hauling-Truck", "iron-plate", "aluminum-plate") -- LJD
 util.add_prerequisite("trucks", "basic-alloys")
 util.replace_ingredient("dumper-truck", "iron-plate", "aluminum-6061") -- Heavy Truck
 
@@ -144,6 +147,7 @@ util.add_ingredient("JunkTrain", "aluminum-plate", 4)
 util.add_prerequisite("ret-electric-locomotives", "reinforced-cable")
 util.replace_ingredient("ret-electric-locomotive", "steel-plate", "aluminum-6061")
 util.replace_ingredient("ret-power-pole", "copper-plate", "acsr-cable")
+util.set_ingredient("ret-power-pole", "acsr-cable", 2)
 
 -- Electric trains
 util.replace_ingredient("deg-electric-locomotive", "steel-plate", "aluminum-6061")

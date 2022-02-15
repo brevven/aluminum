@@ -204,8 +204,8 @@ data:extend({
     order = "d[acsr-cable]",
     enabled = false,
     energy_required = 0.5,
-    ingredients = {{"aluminum-cable", 1}, {"steel-plate", 1}},
-    results = {{"acsr-cable", 1}},
+    ingredients = {{"aluminum-cable", 6}, {"steel-plate", 1}},
+    results = {{"acsr-cable", 3}},
   }
 })
 
@@ -240,6 +240,9 @@ data:extend({
 })
 util.add_effect("engine", { type = "unlock-recipe", recipe = "spark-plug" })
 util.replace_ingredient("spark-plug", "iron-plate", "tungsten-plate")
+if mods.bzzirconium then
+  util.add_prerequisite("engine", "zirconia-processing")
+end
 
 
 local aluminum_6061 = {}

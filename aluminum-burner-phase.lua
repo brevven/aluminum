@@ -40,6 +40,7 @@ end
 if mods["aai-industry"] then
   util.replace_ingredient("burner-assembling-machine", "iron-plate", "aluminum-plate")
   util.replace_ingredient("small-iron-electric-pole", "copper-cable", "aluminum-cable")
+  util.set_ingredient("small-iron-electric-pole", "aluminum-cable", 1)
   util.remove_ingredient("electric-motor", "copper-cable")
   util.add_ingredient("electric-motor", "aluminum-cable", 1)
   util.replace_ingredient("electric-motor", "iron-plate", "aluminum-plate")
@@ -78,6 +79,7 @@ util.replace_ingredient("shotgun", "copper-plate", "aluminum-plate")
 util.replace_ingredient("shotgun-shell", "copper-plate", "stone")
 util.replace_ingredient("automation-science-pack", "copper-plate", "aluminum-plate")
 util.replace_ingredient("small-electric-pole", "copper-cable", "aluminum-cable")
+util.set_ingredient("small-electric-pole", "aluminum-cable", 1)
 util.replace_ingredient("gun-turret", "copper-cable", "aluminum-cable")
 util.replace_ingredient("gun-turret", "copper-plate", "aluminum-plate")
 

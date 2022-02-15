@@ -22,9 +22,6 @@ util.add_ingredient("flamethrower-turret", "spark-plug", 1)
 util.add_ingredient("tank", "spark-plug", 1)
 util.add_ingredient("tank", "spark-plug", 1)
 
-
-util.add_prerequisite("engine", "basic-alloys")
-
 if mods.bztitanium then
   util.remove_ingredient("laser-turret", "diamond")
   util.add_ingredient("laser-turret", "ti-sapphire", 1)
@@ -37,15 +34,9 @@ util.replace_some_ingredient("distractor-capsule", "defender-capsule", 1, "ti-sa
 util.replace_ingredient("fast-inserter", "iron-plate", "aluminum-plate")
 util.replace_ingredient("long-handed-inserter", "iron-plate", "aluminum-plate")
 
-util.replace_ingredient("medium-electric-pole", "copper-plate", "acsr-cable")
-util.replace_ingredient("big-electric-pole", "copper-plate", "acsr-cable")
-util.replace_ingredient("substation", "copper-plate", "acsr-cable")
-util.add_ingredient("substation", "aluminum-plate", 4)
-
 util.replace_some_ingredient("light-armor", "iron-plate", 20, "alumina", 20)
 util.replace_some_ingredient("heavy-armor", "copper-plate", 20, "alumina", 50)
 util.replace_some_ingredient("tank", "steel-plate", 10, "alumina", 40)
-
 
 util.add_ingredient("kr-white-reinforced-plate", "alumina", 10)
 util.add_ingredient("kr-black-reinforced-plate", "alumina", 10)
@@ -115,17 +106,8 @@ end
 
 util.replace_ingredient("chute-miniloader", "iron-plate", "aluminum-plate")
 
--- aai
-if mods["aai-industry"] then
-  util.replace_ingredient("medium-electric-pole", "copper-cable", "acsr-cable")
-  util.set_ingredient("medium-electric-pole", "acsr-cable", 2)
-  util.replace_ingredient("big-electric-pole", "copper-cable", "acsr-cable")
-  util.set_ingredient("big-electric-pole", "acsr-cable", 5)
-  util.replace_ingredient("substation", "copper-cable", "acsr-cable")
-  util.set_ingredient("substation", "acsr-cable", 10)
-end
-
 if mods["space-exploration"] then
+
   util.add_product("se-scrap-recycling", {name="aluminum-ore", amount=1, probability=0.1})
 
   util.replace_ingredient("se-adaptive-armour-equipment-1", "titanium-plate", "alumina")

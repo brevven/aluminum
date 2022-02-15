@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2022-02-14
+  Changes:
+    - Change cost of ACSR cable a bit (slightly cheaper overall).
+    - Tweak costs of power poles and substations to be cheaper.
+    - Car requires 6061 aluminum alloy
+    - Tech tree tweaks
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2022-02-13
+  Fixes:
+    - K2 medium and up electric poles now use ACSR Cable
+    - SE electric pole recycling recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 2022-02-12
   Fixes:
