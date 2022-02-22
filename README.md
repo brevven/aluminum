@@ -18,4 +18,4 @@ See changelog.txt
 
 ### Localization
 
-
+- [x2605](https://github.com/x2605) (ko)
