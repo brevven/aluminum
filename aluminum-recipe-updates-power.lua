@@ -10,6 +10,7 @@ util.add_ingredient("substation", "aluminum-plate", 4)
 
 -- aai or k2
 if mods["aai-industry"] or mods.Krastorio2 then
+  util.add_prerequisite("medium-electric-pole", "reinforced-cable")
   util.replace_ingredient("medium-electric-pole", "copper-cable", "acsr-cable")
   util.replace_ingredient("big-electric-pole", "copper-cable", "acsr-cable")
   util.replace_ingredient("substation", "copper-cable", "acsr-cable")
