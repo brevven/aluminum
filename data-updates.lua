@@ -2,12 +2,13 @@ require("aluminum-recipe-updates")
 require("aluminum-recipe-updates-lds")
 require("aluminum-recipe-updates-transport")
 require("aluminum-recipe-updates-power")
+require("aluminum-recipe-updates-jetpack")
 require("aluminum-matter")
 -- require("omni")
 require("map-gen-preset-updates")
 require("strange-matter")
 
-local util = require("data-util");
+local util = require("data-util")
 if data.raw.resource["copper-ore"] then
   if mods["space-exploration"] then
     local noise = require('noise');
