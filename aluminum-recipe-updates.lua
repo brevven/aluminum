@@ -22,6 +22,8 @@ util.add_ingredient("flamethrower-turret", "spark-plug", 1)
 util.add_ingredient("tank", "spark-plug", 1)
 util.add_ingredient("tank", "spark-plug", 1)
 
+util.replace_some_ingredient("artillery-shell", "explosives", 4, "aluminum-2219", 4)
+
 if mods.bztitanium then
   util.remove_ingredient("laser-turret", "diamond")
   util.add_ingredient("laser-turret", "ti-sapphire", 1)
