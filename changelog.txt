@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2022-02-22
+  Features:
+    - SE Space Trains compatibility & Space trains compatibility
+    - Now officially in beta. Will be added to "Very BZ" in the coming weeks.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2022-02-22
   Features:

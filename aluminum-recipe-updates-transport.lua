@@ -152,3 +152,18 @@ util.set_ingredient("ret-power-pole", "acsr-cable", 2)
 -- Electric trains
 util.replace_ingredient("deg-electric-locomotive", "steel-plate", "aluminum-6061")
 util.replace_ingredient("deg-battery-charging-station", "copper-cable", "aluminum-cable")
+
+-- se space trains
+util.add_ingredient("recipe-space-locomotive", "aluminum-2219", 10)
+util.add_ingredient("recipe-space-fluid-wagon", "aluminum-2219", 10)
+util.add_ingredient("recipe-space-cargo-wagon", "aluminum-2219", 10)
+util.replace_ingredient("space-train-battery-charging-station", "copper-cable", "aluminum-cable")
+
+-- space trains
+util.replace_ingredient("space-trains-locomotive", "steel-plate", "aluminum-2219")
+util.replace_ingredient("space-trains-short-locomotive", "steel-plate", "aluminum-2219")
+util.replace_ingredient("space-trains-cargo-wagon", "steel-plate", "aluminum-2219")
+util.replace_ingredient("space-trains-short-cargo-wagon", "steel-plate", "aluminum-2219")
+util.replace_ingredient("space-trains-fluid-wagon", "steel-plate", "aluminum-2219")
+util.replace_ingredient("space-trains-short-fluid-wagon", "steel-plate", "aluminum-2219")
+util.replace_ingredient("space-trains-charger", "copper-cable", "aluminum-cable")
