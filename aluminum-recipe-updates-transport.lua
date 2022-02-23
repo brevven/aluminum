@@ -167,3 +167,13 @@ util.replace_ingredient("space-trains-short-cargo-wagon", "steel-plate", "alumin
 util.replace_ingredient("space-trains-fluid-wagon", "steel-plate", "aluminum-2219")
 util.replace_ingredient("space-trains-short-fluid-wagon", "steel-plate", "aluminum-2219")
 util.replace_ingredient("space-trains-charger", "copper-cable", "aluminum-cable")
+
+-- SUPERSONIC
+
+util.replace_ingredient("fast-one-mk1 recipe", "iron-plate", "aluminum-6061")
+util.replace_ingredient("fast-one-mk2 recipe", "iron-plate", "aluminum-6061")
+util.replace_ingredient("fast-one-mk3 recipe", "iron-plate", "aluminum-6061")
+util.replace_ingredient("cargo-wagon-immortal-mk2", "iron-plate", "aluminum-6061")
+util.replace_ingredient("fluid-wagon-immortal-mk2", "iron-plate", "aluminum-6061")
+util.replace_ingredient("cargo-wagon-immortal-mk3", "iron-plate", "aluminum-6061")
+util.replace_ingredient("fluid-wagon-immortal-mk3", "iron-plate", "aluminum-6061")
