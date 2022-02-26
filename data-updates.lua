@@ -1,5 +1,6 @@
 require("aluminum-recipe-updates")
 require("aluminum-recipe-updates-lds")
+require("aluminum-recipe-updates-storage")
 require("aluminum-recipe-updates-transport")
 require("aluminum-recipe-updates-power")
 require("aluminum-recipe-updates-jetpack")

@@ -27,8 +27,10 @@ util.replace_some_ingredient("artillery-shell", "explosives", 4, "aluminum-2219"
 if mods.bztitanium then
   util.remove_ingredient("laser-turret", "diamond")
   util.add_ingredient("laser-turret", "ti-sapphire", 1)
+  util.add_ingredient("obelisk-of-light", "ti-sapphire", 1)
 else
   util.add_ingredient("laser-turret", "alumina", 5)
+  util.add_ingredient("obelisk-of-light", "alumina", 5)
 end
 util.replace_some_ingredient("distractor-capsule", "defender-capsule", 1, "ti-sapphire", 1)
 
@@ -147,3 +149,19 @@ util.replace_ingredient("FastLongInserters_fast-inserter", "iron-plate", "alumin
 util.replace_ingredient("FastLongInserters_filter-inserter", "iron-plate", "aluminum-plate")
 util.replace_ingredient("FastLongInserters_stack-inserter", "iron-plate", "aluminum-plate")
 util.replace_ingredient("FastLongInserters_stack-filter-inserter", "iron-plate", "aluminum-plate")
+
+
+-- Robocharger
+util.add_ingredient("robocharger", "aluminum-6061", 35)
+util.add_ingredient("robocharger", "aluminum-cable", 10)
+-- Robot charging station 1x1
+util.add_ingredient("Robot-Charge-Station-1x1-small", "aluminum-6061", 3)
+util.add_ingredient("Robot-Charge-Station-1x1-medium", "aluminum-6061", 6)
+util.add_ingredient("Robot-Charge-Station-1x1", "aluminum-6061", 10)
+util.replace_ingredient("Robot-Charge-Station-1x1-small", "copper-cable", "aluminum-cable")
+util.replace_ingredient("Robot-Charge-Station-1x1-medium","copper-cable", "aluminum-cable")
+util.replace_ingredient("Robot-Charge-Station-1x1","copper-cable", "aluminum-cable")
+
+
+-- Tesla tank ammo
+util.replace_some_ingredient("Teslacharge-pack", "steel-plate", 4, "aluminum-plate", 10)
