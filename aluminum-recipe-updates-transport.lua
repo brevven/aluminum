@@ -177,3 +177,15 @@ util.replace_ingredient("cargo-wagon-immortal-mk2", "iron-plate", "aluminum-6061
 util.replace_ingredient("fluid-wagon-immortal-mk2", "iron-plate", "aluminum-6061")
 util.replace_ingredient("cargo-wagon-immortal-mk3", "iron-plate", "aluminum-6061")
 util.replace_ingredient("fluid-wagon-immortal-mk3", "iron-plate", "aluminum-6061")
+
+-- Battery locomotive
+util.add_ingredient("battery-locomotive", "aluminum-6061", 30)
+
+-- Battery electric train
+util.add_ingredient("bet-locomotive", "aluminum-6061", 30)
+util.add_ingredient("bet-charger-1", "acsr-cable", 2)
+util.add_ingredient("bet-charger-2", "acsr-cable", 2)
+util.add_ingredient("bet-charger-3", "acsr-cable", 2)
+util.replace_ingredient("bet-charger-1", "copper-cable", "aluminum-cable")
+util.replace_ingredient("bet-charger-2", "copper-cable", "aluminum-cable")
+util.replace_ingredient("bet-charger-3", "copper-cable", "aluminum-cable")
