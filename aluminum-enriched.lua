@@ -67,7 +67,7 @@ data:extend(
       allow_productivity = true,
       ingredients = { {"enriched-aluminum", 5} },
       results = { {"alumina", 5} },
-      order = "b[aluminum-plate]-b[enriched-aluminum-plate]"
+      order = "b[alumina]-b[enriched-alumina]",
   },	
 	{
 		type = "recipe",

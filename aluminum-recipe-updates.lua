@@ -75,6 +75,12 @@ util.multiply_recipe("glass-from-sand", 4)
 util.replace_some_ingredient("glass-from-sand", "sand", 3, "alumina", 1)
 -- se
 util.replace_some_ingredient("se-glass-vulcanite", "sand", 3, "alumina", 1)
+
+if not mods.Krastorio2 then
+  util.set_to_founding("glass")
+  util.set_to_founding("glass-from-sand")
+  util.set_to_founding("se-glass-vulcanite")
+end
 -- End glass
 
 

@@ -2,7 +2,7 @@
 
 recipes = {"alumina", "aluminum-plate", "aluminum-cable", "acsr-cable", "spark-plug", "aluminum-2219", "aluminum-6061"}
 if mods["Krastorio2"] then
-  table.insert(recipes, "enriched-aluminum-plate")
+  table.insert(recipes, "enriched-alumina")
   table.insert(recipes, "enriched-aluminum")
 end
 if mods["space-exploration"] then
