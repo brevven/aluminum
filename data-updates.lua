@@ -8,6 +8,7 @@ require("aluminum-matter")
 -- require("omni")
 require("map-gen-preset-updates")
 require("strange-matter")
+require("compatibility/248k")
 
 local util = require("data-util")
 if data.raw.resource["copper-ore"] then

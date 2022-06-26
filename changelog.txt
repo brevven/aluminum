@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2022-06-26
+  Fixes:
+    - Beta support for 248k. This is an initial release and may change in the future
+      Aluminum items merged into one. Multiple production chains.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.10
 Date: 2022-06-23
   Fixes:
