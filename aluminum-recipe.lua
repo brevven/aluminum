@@ -209,6 +209,23 @@ data:extend({
   }
 })
 
+if mods.Krastorio2 then
+  data:extend({
+  {
+    type = "recipe",
+    name = "aluminum-cable-s-c",
+    category = "smelting-crafting",
+    subgroup = "smelting-crafting",
+    order = "d[aaac-cable]",
+    enabled = false,
+    energy_required = 0.5,
+    ingredients = {{"aluminum-ore", 4}},
+    results = {{"aluminum-cable", 1}},
+  },
+  })
+  util.add_effect("kr-automation", { type = "unlock-recipe", recipe = "aluminum-cable-s-c" })
+end
+
 local plug = {
   {"alumina", 1},
   {"copper-plate", 1},

@@ -14,6 +14,8 @@ if deadlock then
   deadlock.add_stack("ti-sapphire", "__bzaluminum__/graphics/icons/stacked/ti-sapphire-stacked.png" , "deadlock-stacking-3", 128)
 
   if mods.Krastorio2 then
+    deadlock.add_stack("enriched-aluminum", "__bzaluminum__/graphics/icons/stacked/enriched-aluminum-ore-stacked.png" , "deadlock-stacking-3", 128)
+
     util.set_icons("deadlock-stacks-stack-automation-core", {
       {icon="__bzaluminum__/graphics/icons/stacked/automation-core-stacked.png", icon_size=64},
       {icon="__deadlock-beltboxes-loaders__/graphics/icons/square/arrow-d-64.png", icon_size=64, scale=.25},
