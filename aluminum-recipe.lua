@@ -219,6 +219,7 @@ if mods.Krastorio2 then
     order = "d[aaac-cable]",
     enabled = false,
     energy_required = 0.5,
+    hide_from_player_crafting = true,
     ingredients = {{"aluminum-ore", 4}},
     results = {{"aluminum-cable", 1}},
   },
