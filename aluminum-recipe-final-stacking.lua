@@ -28,6 +28,9 @@ if deadlock then
       {icon="__bzaluminum__/graphics/icons/stacked/automation-core-stacked.png", icon_size=64},
     })
   end
+  if mods["space-exploration"] then
+    deadlock.add_stack("aluminum-ingot", nil, "deadlock-stacking-2", nil)
+  end
 end
 
 -- Deadlock crating recipes
@@ -41,5 +44,11 @@ if deadlock_crating then
   deadlock_crating.add_crate("aluminum-6061", "deadlock-crating-2")
   deadlock_crating.add_crate("aluminum-2219", "deadlock-crating-3")
   deadlock_crating.add_crate("ti-sapphire", "deadlock-crating-3")
+  if mods.Krastorio2 then
+    deadlock_crating.add_crate("enriched-aluminum", "deadlock-crating-2")
+  end
+  if mods["space-exploration"] then
+    deadlock_crating.add_crate("aluminum-ingot", "deadlock-crating-2")
+  end
 end
 

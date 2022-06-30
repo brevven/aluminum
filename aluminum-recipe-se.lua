@@ -22,6 +22,106 @@ if mods["space-exploration"] then
   }
   })
 
+if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
+  data:extend({
+  {
+    type = "item-subgroup",
+    name = "aluminum",
+    group = "resources",
+    order = "a-h-z-a",
+  }
+  })
+  data.raw.item["alumina"].subgroup = "aluminum"
+  data.raw.item["aluminum-plate"].subgroup = "aluminum"
+  data:extend({
+  {
+    type = "item",
+    name = "aluminum-ingot",
+    icons = {{icon = "__bzaluminum__/graphics/icons/aluminum-ingot.png", icon_size = 128}},
+    order = "b-b",
+    stack_size = 50,
+    subgroup = "aluminum",
+  },
+  {
+    type = "fluid",
+    name = "molten-aluminum",
+    default_temperature = 660,
+    max_temperature = 660,
+    base_color = {r=230, g=230, b=220},
+    flow_color = {r=230, g=230, b=220},
+    icons = {{icon = "__bzaluminum__/graphics/icons/molten-aluminum.png", icon_size = 128}},
+    order = "a[molten]-a",
+    pressure_to_speed_ratio = 0.4,
+    flow_to_energy_ratio = 0.59,
+    auto_barrel = false,
+    subgroup = "fluid",
+  },
+  {
+    type = "recipe",
+    category = "smelting",
+    name = "molten-aluminum",
+    main_product = "molten-aluminum",
+    subgroup = "aluminum",
+    results = {
+      {type = "fluid", name = "molten-aluminum", amount = mods.Krastorio2 and 750 or 900},
+    },
+    energy_required = 60,
+    ingredients = {
+      {name = "alumina", amount = 24},
+      {type = "fluid", name = "se-pyroflux", amount = 10},
+    },
+    enabled = false,
+    always_show_made_in = true,
+    allow_as_intermediate = false,
+    order = "a-a"
+  },
+  {
+    type = "recipe",
+    name = "aluminum-ingot",
+    category = "casting",
+    results = {{"aluminum-ingot", 1}},
+    energy_required = 100,
+    ingredients = {
+      {type = "fluid", name = "molten-aluminum", amount = 250},
+    },
+    enabled = false,
+    always_show_made_in = true,
+    allow_as_intermediate = false,
+  },
+  {
+    type = "recipe",
+    category = "crafting",
+    name = "aluminum-ingot-to-plate",
+
+    icons = {
+      {icon = "__bzaluminum__/graphics/icons/aluminum-plate.png", icon_size = 128, icon_mipmaps = 3},
+      {icon = "__bzaluminum__/graphics/icons/aluminum-ingot.png", icon_size = 128, scale = 0.125, shift = {-8, -8}},
+    },
+    results = {
+      {name = "aluminum-plate", amount = 10},
+    },
+    energy_required = 5,
+    ingredients = {
+      {name = "aluminum-ingot", amount = 1}
+    },
+    enabled = false,
+    always_show_made_in = true,
+    allow_decomposition = false,
+    order = "a-c-b"
+  },
+  })
+  util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "molten-aluminum"})
+  util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "aluminum-ingot"})
+  util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "aluminum-ingot-to-plate"})
+  if mods["Krastorio2"] then
+    se_delivery_cannon_recipes["enriched-aluminum"] = {name= "enriched-aluminum"}
+  end
+
+else
+  -- Organization
+  data.raw.item["aluminum-plate"].subgroup = "plates"
+  data.raw.recipe["aluminum-plate"].subgroup = "plates"
+
 
   data:extend({
   {
@@ -130,4 +230,5 @@ if mods["space-exploration"] then
   })
   table.insert(data.raw.technology["se-processing-vulcanite"].effects, 
                {type = "unlock-recipe", recipe= "aluminum-plate-smelting-vulcanite"})
+end
 end

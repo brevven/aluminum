@@ -12,10 +12,6 @@ if mods["space-exploration"] then
   -- Must be in final fixes
   util.replace_ingredient("rocket-control-unit", "iron-plate", "aluminum-plate")
 
-  -- Organization
-  data.raw.item["aluminum-plate"].subgroup = "plates"
-  data.raw.recipe["aluminum-plate"].subgroup = "plates"
-
   -- core mining balancing
   util.add_to_product("se-core-fragment-omni", "aluminum-ore", -2)
 end
