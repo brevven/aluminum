@@ -30,8 +30,8 @@ data:extend({
   {
     type = "recipe",
     name = "alumina",
+    main_product = "alumina",
     category = "smelting",
-    subgroup = "raw-material",
     order = "d[alumina]",
     icons = (mods["Krastorio2"] and
         {
@@ -49,8 +49,8 @@ data:extend({
   {
     type = "recipe",
     name = "aluminum-plate",
+    main_product = "aluminum-plate",
     category = "smelting",
-    subgroup = "raw-material",
     order = "d[aluminum-plate]",
     icons = (mods["Krastorio2"] and
         {
