@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 2022-07-01
+  Changes:
+    - Minor SE tweaks including pyroflux tech change.
+  Features:
+    - Add option to turn off byproduct. (This setting will show up in other resource mods soon).
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 2022-07-01
   Changes:

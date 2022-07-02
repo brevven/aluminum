@@ -8,6 +8,12 @@ data:extend({
 	},
   {
 		type = "bool-setting",
+		name = "bzaluminum-byproduct",
+		setting_type = "startup",
+    default_value = true,
+	},
+  {
+		type = "bool-setting",
 		name = "bzaluminum-list",
 		setting_type = "startup",
     default_value = false,

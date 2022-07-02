@@ -99,7 +99,7 @@ data:extend(
 		results =
 		{
 			{type = "fluid", name = "water", amount = 90, catalyst_amount = 90},
-			mods.bzsilicon and {type = "item",  name = "silica", amount = 1} or 
+			mods.bzsilicon and util.me.byproduct() and {type = "item",  name = "silica", amount = 1} or 
 			{type = "item",  name = "stone", probability = 0.40, amount = 1},
 			{type = "item",  name = "aluminum-ore", probability = 0.10, amount = 1},
 		},

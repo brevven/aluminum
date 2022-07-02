@@ -31,8 +31,8 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     order = "a-h-z-a",
   }
   })
-  data.raw.item["alumina"].subgroup = "aluminum"
-  data.raw.item["aluminum-plate"].subgroup = "aluminum"
+  util.set_item_subgroup("alumina", "aluminum")
+  util.set_item_subgroup("aluminum-plate", "aluminum")
   data:extend({
   {
     type = "item",
@@ -115,8 +115,10 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.add_effect("se-vulcanite-smelting", {type = "unlock-recipe", recipe= "aluminum-ingot-to-plate"})
   if mods["Krastorio2"] then
     se_delivery_cannon_recipes["enriched-aluminum"] = {name= "enriched-aluminum"}
+    util.set_item_subgroup("enriched-aluminum", "aluminum")
+  else
+    if util.me.byproduct() then util.add_product("molten-aluminum", {"silica", 6}) end
   end
-
 else
   -- Organization
   data.raw.item["aluminum-plate"].subgroup = "plates"
@@ -186,8 +188,7 @@ else
         {name = "se-vulcanite-block", amount = 1},
       },
       results = {
-        {name = "alumina", amount = 10},
-        {name = "silica", amount = 2},
+        {name = "alumina", amount = util.me.byproduct() and 10 or 12},
       },
       icons =
       {
@@ -198,6 +199,7 @@ else
       
     },
     })
+    if util.me.byproduct() then util.add_product("alumina-smelting-vulcanite", {"silica", 2}) end
     table.insert(data.raw.technology["se-processing-vulcanite"].effects, 
         {type = "unlock-recipe", recipe= "alumina-smelting-vulcanite"})
   end

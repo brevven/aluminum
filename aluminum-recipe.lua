@@ -5,12 +5,12 @@ local futil = require("util");
 
 local alumina_results = {}
 
-if mods.bzsilicon and not mods.Krastorio2 then
+if mods.bzsilicon and util.me.byproduct() and not mods.Krastorio2 then
   alumina_results ={
     {type="item", name = "alumina", amount=1, probability=0.95},
     {type="item", name = "silica", amount=1, probability=0.05},
   }
-elseif mods.bzsilicon and mods.Krastorio2 then
+elseif mods.bzsilicon and util.me.byproduct() and mods.Krastorio2 then
   alumina_results ={
     {type="item", name = "alumina", amount=5, probability=0.95},
     {type="item", name = "silica", amount=1, probability=0.25},

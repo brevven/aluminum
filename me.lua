@@ -7,6 +7,10 @@ function me.mod_setting()
   return me.get_setting("bzmod-setting") == "yes"
 end
 
+function me.byproduct()
+  return me.get_setting("bzaluminum-byproduct")
+end
+
 function me.get_setting(name)
   if settings.startup[name] == nil then
     return nil
