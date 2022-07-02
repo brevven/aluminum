@@ -22,6 +22,7 @@ data:extend(
   {
     type = "recipe",
     name = "enriched-aluminum",
+    main_product = "enriched-aluminum",
     icon = "__bzaluminum__/graphics/icons/enriched-aluminum.png",
     icon_size = 128,
     category = "chemistry",
@@ -48,7 +49,6 @@ data:extend(
       tertiary = {r = 0.690, g = 0.768, b = 0.870, a = 0.000}, 
       quaternary = {r = 0.0, g = 0.980, b = 0.603, a = 0.900}
     },
-    subgroup = "raw-material",
     order = "e03[enriched-aluminum]"
   },
   {
