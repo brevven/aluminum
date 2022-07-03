@@ -1,7 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 2022-07-04
+  Changes:
+    - K2 Shelter uses aluminum cable
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 2022-07-03
+  Fixes:
+    - SE: Prod modules molten recipe
+  Changes:
+    - SE: No byproduct in molten recipe, regardless of setting.
+    - SE: Ingot time balanced
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 2022-07-02
-  Fix:
+  Fixes:
     - SE K2 subgroup fix, more pyroflux tech fixes.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1

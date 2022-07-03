@@ -66,6 +66,7 @@ for i, item in pairs(data.raw.item) do
   end
 end
 
+util.replace_ingredient("kr-shelter", "copper-cable", "aluminum-cable")
 
 -- Glass
 -- k2

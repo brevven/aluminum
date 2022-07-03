@@ -6,6 +6,7 @@ if mods["Krastorio2"] then
   table.insert(recipes, "enriched-aluminum")
 end
 if mods["space-exploration"] then
+  table.insert(recipes, "molten-aluminum")
   table.insert(recipes, "alumina-smelting-vulcanite")
   table.insert(recipes, "aluminum-plate-smelting-vulcanite")
   if mods["Krastorio2"] then

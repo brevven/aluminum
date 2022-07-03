@@ -80,7 +80,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     name = "aluminum-ingot",
     category = "casting",
     results = {{"aluminum-ingot", 1}},
-    energy_required = 100,
+    energy_required = 25,
     ingredients = {
       {type = "fluid", name = "molten-aluminum", amount = 250},
     },
@@ -119,8 +119,6 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   if mods["Krastorio2"] then
     se_delivery_cannon_recipes["enriched-aluminum"] = {name= "enriched-aluminum"}
     util.set_item_subgroup("enriched-aluminum", "aluminum")
-  else
-    if util.me.byproduct() then util.add_product("molten-aluminum", {"silica", 6}) end
   end
 else
   -- Organization
