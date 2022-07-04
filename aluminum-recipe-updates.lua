@@ -74,14 +74,25 @@ util.replace_some_ingredient("glass", "sand", 3, "alumina", 1)
 -- aai
 util.multiply_recipe("glass-from-sand", 4)
 util.replace_some_ingredient("glass-from-sand", "sand", 3, "alumina", 1)
+util.set_category("glass-from-sand", "basic-founding")
 -- se
 util.replace_some_ingredient("se-glass-vulcanite", "sand", 3, "alumina", 1)
+
+-- sand-and-glass
+util.multiply_recipe("sng-glass-plate", 4)
+util.replace_some_ingredient("sng-glass-plate", "sng-sand", 3, "alumina", 1)
+util.set_category("sng-glass-plate", "basic-founding")
+
+  
+  
 
 if not mods.Krastorio2 then
   util.set_to_founding("glass")
   util.set_to_founding("glass-from-sand")
   util.set_to_founding("se-glass-vulcanite")
+  util.set_to_founding("sng-glass-plate")
 end
+
 -- End glass
 
 

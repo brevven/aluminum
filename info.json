@@ -8,7 +8,7 @@
     "homepage": "",
     "dependencies": [
       "base >= 1.1.0",
-      "bzfoundry",
+      "bzfoundry >= 0.2.1",
       "? bztitanium >= 1.0.3",
       "? bzlead",
       "? bzzirconium >= 0.5.4",
@@ -17,6 +17,7 @@
       "? space-exploration",
       "? aai-industry",
       "? Krastorio2",
+      "? sand-and-glass",
       "? 248k",
       "? deadlock-beltboxes-loaders",
       "? DeadlockCrating"

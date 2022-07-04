@@ -551,7 +551,7 @@ end
 -- Set recipe category
 function util.set_category(recipe_name, category)
   if me.bypass[recipe_name] then return end
-  if data.raw.recipe[recipe_name] then
+  if data.raw.recipe[recipe_name] and data.raw["recipe-category"][category] then
     me.add_modified(recipe_name)
     data.raw.recipe[recipe_name].category = category
   end
@@ -601,7 +601,7 @@ end
 
 -- Add crafting category to an entity
 function util.add_crafting_category(entity_type, entity, category)
-   if data.raw[entity_type][entity] then
+   if data.raw[entity_type][entity] and data.raw["recipe-category"][category] then
       for i, existing in pairs(data.raw[entity_type][entity].crafting_categories) do
         if existing == category then
           log(entity.." not adding "..category.." -- duplicate")

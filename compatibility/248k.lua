@@ -14,6 +14,10 @@ end
 -- Remove 248k titanium plate
 util.remove_raw("item", al2)
 
+-- glass uses alumina
+util.multiply_recipe("fi_arc_glass_recipe", 2)
+util.replace_some_ingredient("fi_arc_glass_recipe", "silica", 2, "alumina", 1) 
+
 -- Stone purification should produce even outputs now
 util.add_to_ingredient("el_purify_stone_recipe", "stone", 5)
 util.add_to_ingredient("el_purify_stone_recipe", "water", 50)
