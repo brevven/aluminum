@@ -2,7 +2,8 @@
 Version: 0.3.4
 Date: 2022-07-04
   Changes:
-    - Sand & Glass: recipe requires alumina, in foundry
+    - AAI: recipe requires alumina, in foundry. Can be handcrafted.
+    - Sand & Glass: recipe requires alumina, in foundry.
     - 248K: motlen glass requires alumina
     - K2 Shelter uses aluminum cable
 ---------------------------------------------------------------------------------------------------
