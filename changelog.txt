@@ -3,6 +3,7 @@ Version: 0.3.5
 Date: 2022-07-06
   Chnages:
     - Japanese (ja) l10n updates thanks to Sakuro
+    - Tweak to ore entity graphics.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 2022-07-04
