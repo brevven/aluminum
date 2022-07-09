@@ -1,7 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 2022-07-09
+  Changes:
+    - Temporary en locale strings for procedural deep core mining recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 2022-07-06
-  Chnages:
+  Changes:
     - Japanese (ja) l10n updates thanks to Sakuro
     - Tweak to ore entity graphics.
 ---------------------------------------------------------------------------------------------------
