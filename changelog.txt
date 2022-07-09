@@ -3,6 +3,7 @@ Version: 0.3.6
 Date: 2022-07-09
   Changes:
     - Temporary en locale strings for procedural deep core mining recipes
+    - K2: advanced assembler enriched aluminum --> cable recipe
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 2022-07-06

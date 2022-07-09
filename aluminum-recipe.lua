@@ -223,8 +223,21 @@ if mods.Krastorio2 then
     ingredients = {{"aluminum-ore", 4}},
     results = {{"aluminum-cable", 1}},
   },
+  {
+    type = "recipe",
+    name = "aluminum-cable-enriched-s-c",
+    category = "smelting-crafting",
+    subgroup = "smelting-crafting",
+    order = "d[aaac-cable]",
+    enabled = false,
+    energy_required = 0.5,
+    hide_from_player_crafting = true,
+    ingredients = {{"enriched-aluminum", 2}},
+    results = {{"aluminum-cable", 1}},
+  },
   })
   util.add_effect("kr-automation", { type = "unlock-recipe", recipe = "aluminum-cable-s-c" })
+  util.add_effect("kr-automation", { type = "unlock-recipe", recipe = "aluminum-cable-enriched-s-c" })
 end
 
 local plug = {
