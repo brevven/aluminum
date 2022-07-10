@@ -427,4 +427,19 @@ if mods.bztitanium then
   end
 end
 
+if mods.DoubleFurnace then
+data:extend({
+  {
+    type = "recipe",
+    name = "double-aluminum",
+    category = "double-smelting",
+    enabled = false,
+    energy_required = 3.2,
+    ingredients =  {{"aluminum-ore", 1}},
+    results = {{"aluminum-plate", 1}},
+  }
+})
+util.add_effect("double-smelting-tech-steel", {type = "unlock-recipe", recipe = "double-aluminum"})
+end
+
 end
