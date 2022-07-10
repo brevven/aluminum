@@ -156,7 +156,6 @@ if mods["space-exploration"] then
   util.add_ingredient("se-space-hypercooler", "ti-sapphire", 6)
 end
 
-
 util.replace_ingredient("Schall-fast-inserter-R1", "iron-plate", "aluminum-plate")
 util.replace_ingredient("Schall-fast-inserter-R2", "iron-plate", "aluminum-plate")
 util.replace_ingredient("Schall-fast-inserter-R3", "iron-plate", "aluminum-plate")
@@ -167,7 +166,6 @@ util.replace_ingredient("FastLongInserters_fast-inserter", "iron-plate", "alumin
 util.replace_ingredient("FastLongInserters_filter-inserter", "iron-plate", "aluminum-plate")
 util.replace_ingredient("FastLongInserters_stack-inserter", "iron-plate", "aluminum-plate")
 util.replace_ingredient("FastLongInserters_stack-filter-inserter", "iron-plate", "aluminum-plate")
-
 
 -- Robocharger
 util.add_ingredient("robocharger", "aluminum-6061", 35)
@@ -180,6 +178,13 @@ util.replace_ingredient("Robot-Charge-Station-1x1-small", "copper-cable", "alumi
 util.replace_ingredient("Robot-Charge-Station-1x1-medium","copper-cable", "aluminum-cable")
 util.replace_ingredient("Robot-Charge-Station-1x1","copper-cable", "aluminum-cable")
 
-
 -- Tesla tank ammo
 util.replace_some_ingredient("Teslacharge-pack", "steel-plate", 4, "aluminum-plate", 10)
+
+
+-- Leighzer's scrap
+if mods.leighzerscrapyards then
+  util.add_to_product("scrap-processing", "iron-plate", -1)
+  util.add_to_product("scrap-processing", "copper-plate", -1)
+  util.add_product("scrap-processing", {"aluminum-plate", 2})
+end
