@@ -52,7 +52,8 @@ util.add_ingredient("transport-belt-loader", "aluminum-plate", 10)
 -- buildings
 
 util.replace_some_ingredient("rocket-silo", "concrete", 500, "alumina", 500)
-util.replace_some_ingredient("rocket-silo", "steel-plate", 500, "aluminum-plate", 500)
+util.add_ingredient("rocket-silo", "aluminum-plate", 500)
+util.set_ingredient("rocket-silo", "steel-plate", 500)
 util.add_ingredient("rocket-silo", "spark-plug", 100)
 
 util.add_ingredient("roboport", "aluminum-6061", 45)
