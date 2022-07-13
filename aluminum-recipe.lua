@@ -222,6 +222,10 @@ if mods.Krastorio2 then
     hide_from_player_crafting = true,
     ingredients = {{"aluminum-ore", 4}},
     results = {{"aluminum-cable", 1}},
+    icons = {
+      {icon = "__bzaluminum__/graphics/icons/aluminum-cable.png", icon_size = 64, icon_mipmaps = 4},
+      {icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, icon_mipmaps = 3, scale=0.25, shift= {-8, -8}},
+    },
   },
   {
     type = "recipe",
@@ -234,6 +238,10 @@ if mods.Krastorio2 then
     hide_from_player_crafting = true,
     ingredients = {{"enriched-aluminum", 2}},
     results = {{"aluminum-cable", 1}},
+    icons = {
+      {icon = "__bzaluminum__/graphics/icons/aluminum-cable.png", icon_size = 64, icon_mipmaps = 4},
+      {icon = "__bzaluminum__/graphics/icons/enriched-aluminum.png", icon_size = 128, scale=0.125, shift= {-8, -8}},
+    },
   },
   })
   util.add_effect("kr-automation", { type = "unlock-recipe", recipe = "aluminum-cable-s-c" })
