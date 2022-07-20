@@ -24,6 +24,15 @@ for i, entity in pairs(data.raw.furnace) do
 end
 end
 
+if mods.bztitanium then
+  util.add_ingredient("w93-modular-gun-plaser", "ti-sapphire", 1)
+  util.add_ingredient("w93-modular-gun-tlaser", "ti-sapphire", 1)
+  util.add_ingredient("w93-modular-gun-beam", "ti-sapphire", 1)
+else
+  util.add_ingredient("w93-modular-gun-plaser", "alumina", 5)
+  util.add_ingredient("w93-modular-gun-tlaser", "alumina", 5)
+  util.add_ingredient("w93-modular-gun-beam", "alumina", 5)
+end
 
 -- Must be last
 util.create_list()

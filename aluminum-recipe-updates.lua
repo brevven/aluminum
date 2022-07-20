@@ -189,3 +189,19 @@ if mods.leighzerscrapyards then
   util.add_to_product("scrap-processing", "copper-plate", -1)
   util.add_product("scrap-processing", {"aluminum-plate", 2})
 end
+
+
+
+-- Rampant
+util.add_ingredient("advanced-laser-item-rampant-arsenal", "ti-sapphire", 1)
+
+-- Laser weapons
+util.add_ingredient("laser-gun", "ti-sapphire", 1)
+util.add_ingredient("laser-minigun", "ti-sapphire", 1)
+
+-- Laser Tanks
+util.add_ingredient("lasercar", "ti-sapphire", 1)
+util.add_ingredient("lasertank", "ti-sapphire", 1)
+
+-- Laser wall
+util.add_ingredient("laser-wall", "ti-sapphire", 1)

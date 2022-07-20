@@ -1,6 +1,6 @@
 {
     "name": "bzaluminum",
-    "version": "0.3.12",
+    "version": "0.3.13",
     "factorio_version": "1.1",
     "title": "Aluminum",
     "author": "Brevven",
@@ -20,7 +20,8 @@
       "? sand-and-glass",
       "? 248k",
       "? deadlock-beltboxes-loaders",
-      "? DeadlockCrating"
+      "? DeadlockCrating",
+      "(?) scattergun_turret"
     ],
     "description": "Adds aluminum, alumina, cables, alloys and more to the game.\n\nCompatible with Krastorio 2 and Space Exploration. A standalone piece of BZ Mods."
 }

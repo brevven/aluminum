@@ -10,8 +10,9 @@ if not mods.Krastorio2 and not mods["aai-industry"] then
 
   -- Keep repair pack raw ingredients close to the same
   util.remove_ingredient("repair-pack", "electronic-circuit")
+  util.remove_ingredient("repair-pack", "copper-cable")
   util.add_ingredient("repair-pack", "aluminum-cable", 3)
-  util.add_to_ingredient("repair-pack", "iron-gear-wheel", 1)
+  util.set_ingredient("repair-pack", "iron-gear-wheel", 3)
 
   util.add_effect("electronics", { type = "unlock-recipe", recipe = "electronic-circuit" })
   util.add_effect("electronics", { type = "unlock-recipe", recipe = "inserter" })
