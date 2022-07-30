@@ -33,6 +33,7 @@ Version: 0.3.7
 Date: 2022-07-10
   Changes:
     - Leighzer's scrapyards compatibility
+  Localization:
     - ru l10n thanks to Pergamum663
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.6
@@ -43,8 +44,9 @@ Date: 2022-07-09
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 2022-07-06
-  Changes:
+  Localization:
     - Japanese (ja) l10n updates thanks to Sakuro
+  Changes:
     - Tweak to ore entity graphics.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
@@ -113,14 +115,15 @@ Date: 2022-06-09
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 2022-06-05
-  Changes:
+  Localization:
     - Japanese (ja) l10n thanks to Sakuro
-    - Korean (de) l10n thanks to Yokmp
+    - German (de) l10n thanks to Yokmp
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2022-05-30
-  Changes:
+  Localization:
     - Enable alternate spelling for locale via other mods.
+  Changes:
     - Compat with large electric pole
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
@@ -158,7 +161,7 @@ Date: 2022-02-22
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2022-02-22
-  Features:
+  Localization:
     - Korean (ko) l10n, thanks to x2605
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
