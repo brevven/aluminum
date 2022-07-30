@@ -13,6 +13,9 @@ if mods["space-exploration"] then
     table.insert(recipes, "enriched-alumina-smelting-vulcanite")
   end
 end
+if mods.bztitanium then
+    table.insert(recipes, "ti-sapphire")
+end
 
 for i, recipe in pairs(recipes) do
   if data.raw.recipe[recipe] then

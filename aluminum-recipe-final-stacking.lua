@@ -11,7 +11,9 @@ if deadlock then
   deadlock.add_stack("spark-plug", "__bzaluminum__/graphics/icons/stacked/spark-plug-stacked.png" , "deadlock-stacking-2", 128)
   deadlock.add_stack("aluminum-6061", "__bzaluminum__/graphics/icons/stacked/aluminum-6061-stacked.png" , "deadlock-stacking-2", 128)
   deadlock.add_stack("aluminum-2219", "__bzaluminum__/graphics/icons/stacked/aluminum-2219-stacked.png" , "deadlock-stacking-3", 128)
-  deadlock.add_stack("ti-sapphire", "__bzaluminum__/graphics/icons/stacked/ti-sapphire-stacked.png" , "deadlock-stacking-3", 128)
+  if mods.bztitanium then
+    deadlock.add_stack("ti-sapphire", "__bzaluminum__/graphics/icons/stacked/ti-sapphire-stacked.png" , "deadlock-stacking-3", 128)
+  end
 
   if mods.Krastorio2 then
     deadlock.add_stack("enriched-aluminum", "__bzaluminum__/graphics/icons/stacked/enriched-aluminum-ore-stacked.png" , "deadlock-stacking-3", 128)
@@ -43,7 +45,9 @@ if deadlock_crating then
   deadlock_crating.add_crate("spark-plug", "deadlock-crating-2")
   deadlock_crating.add_crate("aluminum-6061", "deadlock-crating-2")
   deadlock_crating.add_crate("aluminum-2219", "deadlock-crating-3")
-  deadlock_crating.add_crate("ti-sapphire", "deadlock-crating-3")
+  if mods.bztitanium then
+    deadlock_crating.add_crate("ti-sapphire", "deadlock-crating-3")
+  end
   if mods.Krastorio2 then
     deadlock_crating.add_crate("enriched-aluminum", "deadlock-crating-2")
   end
