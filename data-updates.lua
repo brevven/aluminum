@@ -32,6 +32,11 @@ if data.raw.resource["copper-ore"] then
     }
   end
 end
+
+if mods.Asteroid_Mining then
+  require("__Asteroid_Mining__.scripts.addmodule")
+  amfunc.addtype("aluminum-ore", {a = 0,r = 0.58,g = 0.6,b = 0.56})
+end
     
 -- Must be last
 util.create_list()
