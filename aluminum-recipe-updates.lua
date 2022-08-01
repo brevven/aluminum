@@ -205,3 +205,12 @@ util.add_ingredient("lasertank", "ti-sapphire", 1)
 
 -- Laser wall
 util.add_ingredient("laser-wall", "ti-sapphire", 1)
+
+-- Transport drones
+util.replace_ingredient("request-depot", "iron-plate", "aluminum-plate")
+util.replace_ingredient("supply-depot", "iron-plate", "aluminum-plate")
+util.replace_ingredient("buffer-depot", "iron-plate", "aluminum-plate")
+util.replace_ingredient("fluid-depot", "iron-plate", "aluminum-plate")
+util.replace_ingredient("fuel-depot", "iron-plate", "aluminum-plate")
+util.replace_ingredient("transport-drone", "steel-plate", "aluminum-6061")
+util.add_prerequisite("transport-system", "basic-alloys")
