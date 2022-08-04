@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.16
+Date: 2022-08-05
+  Changes:
+    - Some more updated recipes for ScienceCostTweaker - blue science
+    - VTK deepcore mining, one more missing string
+---------------------------------------------------------------------------------------------------
 Version: 0.3.15
 Date: 2022-08-02
   Changes:

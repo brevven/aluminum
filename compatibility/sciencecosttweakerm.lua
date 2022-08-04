@@ -11,3 +11,5 @@ if data.raw.item["sct-t1-magnet-coils"] then
                         tint = {a=1, r=.66, b=.99, g=.9},
                       }})
 end
+
+util.replace_ingredient("sct-t3-laser-foci", "iron-plate", "alumina")
