@@ -8,7 +8,7 @@ function me.mod_setting()
 end
 
 function me.byproduct()
-  return me.get_setting("bzaluminum-byproduct")
+  return me.get_setting("bzaluminum-byproduct") and not me.get_setting("bz-no-byproduct")
 end
 
 function me.get_setting(name)

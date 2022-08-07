@@ -16,6 +16,5 @@ if mods.Krastorio2 then
   end
 end
 
-
 -- Must be last
 util.create_list()

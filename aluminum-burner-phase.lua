@@ -92,3 +92,7 @@ util.add_prerequisite("heavy-armor", "copper-processing")
 
 util.set_enabled("deadlock-copper-lamp", false)
 util.add_effect("copper-processing", { type = "unlock-recipe", recipe = "deadlock-copper-lamp" })
+
+util.replace_ingredients_prior_to("electronics", "electronic-circuit", "aluminum-cable")
+util.replace_ingredients_prior_to("copper-processing", "copper-cable", "aluminum-cable")
+util.replace_ingredients_prior_to("copper-processing", "copper-plate", "aluminum-plate")

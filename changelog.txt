@@ -1,4 +1,22 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 2022-08-08
+  Fixes:
+    - Fix due to lua treating string 'false' as truthy and Factorio treating 'false' as falsy. 
+      Fixes minor wierdness from 0.4.0 with some mods like switch button and filter combinator.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 2022-08-07
+  Fixes:
+    - Avoid strange situations related to previous change, eg. where copper wire recipe requires
+      aluminum plate.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2022-08-07
+  Changes:
+    - All mods with early recipes requiring copper or electronic circuits should be more generally
+      compatible now.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.16
 Date: 2022-08-05
   Changes:
