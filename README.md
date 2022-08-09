@@ -13,6 +13,7 @@ See changelog.txt
 
 ## Thanks to 
 - [snouz](https://github.com/snouz) (logo inspiration, ore graphics templates)
+- [U.N.Owen](https://mods.factorio.com/user/U.N.Owen) (broader compatibility)
 - FreeSVG/OpenClipart for spark plug: https://freesvg.org/spark-plug-vector-image
 - Krastorio2 team for automation-core icons (Licensed under GNU LGPL v3.0)
 
