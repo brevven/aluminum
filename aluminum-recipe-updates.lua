@@ -11,7 +11,7 @@ util.replace_ingredient("splitter", "iron-plate", "aluminum-plate")
 util.replace_ingredient("rocket", "iron-plate", "aluminum-plate")
 util.replace_ingredient("loader", "iron-plate", "aluminum-plate")
 
-util.replace_ingredient("small-lamp", "copper-cable", "aluminum-cable")
+util.replace_ingredient("small-lamp", "copper-cable", "aluminum-cable", 1)
 util.replace_ingredient("radar", "iron-plate", "aluminum-plate")
 util.replace_ingredient("steam-engine", "iron-plate", "aluminum-plate")
 util.replace_ingredient("storage-tank", "iron-plate", "aluminum-plate")
