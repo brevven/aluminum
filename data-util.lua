@@ -137,21 +137,25 @@ function util.add_unlock(technology_name, recipe)
   util.add_effect(technology_name, {type="unlock-recipe", recipe=recipe})
 end
 
--- remove recipe unlock effect from a given technology
+-- remove recipe unlock effect from a given technology, multiple times if necessary
 function util.remove_recipe_effect(technology_name, recipe_name)
-  local technology = data.raw.technology[technology_name]
-  local index = -1
-  if technology and technology.effects then
-    for i, effect in pairs(technology.effects) do
-      if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
-        index = i
-        break
-      end
+    local technology = data.raw.technology[technology_name]
+    local index = -1
+    local cnt = 0
+    if technology and technology.effects then
+        for i, effect in pairs(technology.effects) do
+            if effect.type == "unlock-recipe" and effect.recipe == recipe_name then
+                index = i
+                cnt = cnt + 1
+            end
+        end
+        if index > -1 then
+            table.remove(technology.effects, index)
+            if cnt > 1 then -- not over yet, do it again
+                util.remove_recipe_effect(technology_name, recipe_name)
+            end
+        end
     end
-    if index > -1 then
-      table.remove(technology.effects, index)
-    end
-  end
 end
 
 -- Set technology ingredients
@@ -964,5 +968,16 @@ function replace_ingredients_prior_to(tech, old, new, multiplier)
   end
 end
 
+function util.remove_all_recipe_effects(recipe_name)
+    for name, _ in pairs(data.raw.technology) do
+        util.remove_recipe_effect(name, recipe_name)
+    end
+end
+
+function util.add_unlock_force(technology_name, recipe)
+    util.set_enabled(recipe, false)
+    util.remove_all_recipe_effects(recipe)
+    util.add_unlock(technology_name, recipe)
+end
 
 return util

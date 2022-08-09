@@ -3,6 +3,9 @@ Version: 0.4.3
 Date: 2022-08-10
   Changes:
     - Lamp only requires 1 aluminum cable now.
+  Fixes:
+    - Some more general compatibility fixes, thanks to U.N.Owen, including improved compatibility
+      with their fork of Research Desk.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.2
 Date: 2022-08-08
