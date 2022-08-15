@@ -43,6 +43,10 @@ if get_setting("bz-recipe-bypass") then
   end
 end
 
+function util.is_foundry()
+  return mods.bzfoundry and not me.get_setting("bzfoundry-minimal")
+end
+
 
 function bypass(recipe_name) 
   if me.bypass[recipe_name] then return true end
@@ -294,7 +298,10 @@ end
 -- Only works for recipes with multiple products
 function util.add_product(recipe_name, product)
   if bypass(recipe_name) then return end
-  if data.raw.recipe[recipe_name] and (data.raw.item[product[1]] or data.raw.item[product.name]) then
+  if data.raw.recipe[recipe_name] and 
+  (data.raw.item[product[1]] or data.raw.item[product.name] or
+   data.raw.fluid[product[1]] or data.raw.fluid[product.name]
+  ) then
     add_product(data.raw.recipe[recipe_name], product)
     add_product(data.raw.recipe[recipe_name].normal, product)
     add_product(data.raw.recipe[recipe_name].expensive, product)
@@ -943,7 +950,11 @@ function util.replace_ingredients_prior_to(tech, old, new, multiplier)
   end
   util.remove_prior_unlocks(tech, old)
   for i, recipe in pairs(data.raw.recipe) do
-    if recipe.enabled and recipe.enabled ~= 'false' then
+    if (recipe.enabled and recipe.enabled ~= 'false')
+      and (not recipe.hidden or recipe.hidden == 'true') -- probably don't want to change hidden recipes
+      and string.sub(recipe.name, 1, 3) ~= 'se-' -- have to exlude SE in general :(
+    then
+      -- log("BZZZ due to 'enabled' replacing " .. old .. " with " .. new .." in " .. recipe.name)
       util.replace_ingredient(recipe.name, old, new, multiplier, true)
     end
   end
