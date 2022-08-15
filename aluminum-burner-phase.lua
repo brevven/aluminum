@@ -72,7 +72,11 @@ if mods["aai-industry"] and mods.Krastorio2 then
   -- TODO basic fluid handling and grpahite
 
 end
- 
+
+-- Industrial Display Plates
+util.add_unlock_force("copper-processing", "copper-display-small")
+util.add_unlock_force("copper-processing", "copper-display-medium")
+util.add_unlock_force("copper-processing", "copper-display")
 
 util.replace_ingredient("submachine-gun", "copper-plate", "aluminum-plate")
 util.replace_ingredient("pistol", "copper-plate", "aluminum-plate")
