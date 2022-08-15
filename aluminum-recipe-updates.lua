@@ -214,3 +214,9 @@ util.replace_ingredient("fluid-depot", "iron-plate", "aluminum-plate")
 util.replace_ingredient("fuel-depot", "iron-plate", "aluminum-plate")
 util.replace_ingredient("transport-drone", "steel-plate", "aluminum-6061")
 util.add_prerequisite("transport-system", "basic-alloys")
+
+-- Ultimate belts
+util.replace_ingredient("extreme-fast-belt", "express-transport-belt", "aluminum-2219", 25)
+util.replace_ingredient("extreme-fast-underground-belt", "express-underground-belt", "aluminum-2219", 100)
+util.replace_ingredient("extreme-fast-belt-loader", "express-transport-belt-loader", "aluminum-2219", 50)
+
