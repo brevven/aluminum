@@ -14,3 +14,19 @@ function on_console_chat(event)
   end
 end
 script.on_event(defines.events.on_console_chat, on_console_chat)
+
+
+-- Free burner inserter
+-- (thanks to modder planetfall for inspiration, from Brass Tacks)
+script.on_init(
+  function()
+    if remote.interfaces["freeplay"] then
+      local care_package = remote.call("freeplay", "get_created_items")
+      if settings.global["bzaluminum-starting-items"].value then
+        care_package["burner-inserter"] = 1
+      end
+      remote.call("freeplay", "set_created_items", care_package)
+    end
+  end
+)
+
