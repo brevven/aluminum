@@ -1,3 +1,4 @@
+require("cables")
 require("aluminum-ore")
 require("aluminum-recipe")
 require("aluminum-enriched")   -- Enriched Al for Krastorio 2

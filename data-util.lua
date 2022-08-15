@@ -23,6 +23,12 @@ else
   util.titanium_processing = "titanium-processing"
 end
 
+function util.se6()
+  return mods["space-exploration"] and mods["space-exploration"] >= "0.6" 
+end
+
+util.cablesg = util.se6() and "electronic" or "cable"
+
 function get_setting(name)
   if settings.startup[name] == nil then
     return nil
