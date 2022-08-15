@@ -122,6 +122,13 @@ if mods.bzsilicon then
   util.remove_prerequisite("landfill", "logistic-science-pack")
   util.set_tech_recipe("landfill", {{"automation-science-pack", 1}})
   util.add_effect("landfill", {type="unlock-recipe", recipe="landfill-silica"})
+  util.set_icons(
+      "landfill-silica",
+      {
+        {icon=data.raw.item["landfill"].icon, icon_size=data.raw.item["landfill"].icon_size, icon_mipmaps=data.raw.item["landfill"].icon_mipmaps},
+        {icon=data.raw.item["silica"].icon, icon_size=data.raw.item["silica"].icon_size, icon_mipmaps=data.raw.item["silica"].icon_mipmaps, scale=0.25, shift={8,-8}},
+      })
+
 end
 
 
