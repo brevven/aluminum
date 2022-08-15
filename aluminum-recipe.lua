@@ -438,7 +438,7 @@ if mods.bztitanium then
   util.add_prerequisite("laser", util.titanium_processing)
   if mods.bzcarbon then
     util.add_ingredient("ti-sapphire", "diamond", 1)
-    util.add_product("ti-sapphire", {type="item", name="diamond", amount=1, probability=0.8})
+    util.add_product("ti-sapphire", {type="item", name="diamond", amount=1, probability=0.8, catalyst_amount=1})
   end
 end
 
