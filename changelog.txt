@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+Date: 2022-08-15
+  Fixes:
+    - When grinding Ti-sapphires, returned diamonds no longer affected by prod modules
+  Changes:
+    - Industrial display plates compatibility
+    - More minor mod compatibility - various high-tier belts and inserters including
+      Bob's logistics, ultimate belts
+  Features:
+    - The engineer starts with a single burner inserter. Yay! (Setting to turn this off.)
+      This allows players to create aluminum plates without being forced to manually move items
+      from one machine to another.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: 2022-08-11
+  Fixes:
+    - SE: Fix delivery cannon recipes post 0.4.0
+---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: 2022-08-10
+  Changes:
+    - Cable item subgroup
+    - Rocket Silo Construction - initial compatibility
+    - With S&S mod, Silica landfill recipe icon shows silica
+---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 2022-08-10
   Changes:
