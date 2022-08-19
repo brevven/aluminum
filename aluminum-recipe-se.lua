@@ -5,24 +5,10 @@ if mods["space-exploration"] then
   se_delivery_cannon_recipes["aluminum-ore"] = {name= "aluminum-ore"}
   se_delivery_cannon_recipes["alumina"] = {name= "alumina"}
   se_delivery_cannon_recipes["aluminum-plate"] = {name= "aluminum-plate"}
-
-  data:extend({
-  {
-    type = "recipe",
-    icons = {
-      { icon = "__base__/graphics/icons/landfill.png", icon_size = 64, icon_mipmaps = 3 },
-      { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, scale = 0.25},
-    },
-    name = "landfill-aluminum-ore",
-    category = "hard-recycling",
-    order = "z-b-aluminum",
-    subgroup = "terrain",
-    result = "landfill",
-    ingredients = {{"aluminum-ore", 50}},
-  }
-  })
+  util.se_landfill({ore="aluminum-ore"})
 
 if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
+  util.se_matter({ore="aluminum-ore", energy_required=1, quant_out=10, stream_out=60})
   data:extend({
   {
     type = "item-subgroup",
@@ -125,23 +111,6 @@ else
   data.raw.item["aluminum-plate"].subgroup = "plates"
   data.raw.recipe["aluminum-plate"].subgroup = "plates"
 
-
-  data:extend({
-  {
-    type = "recipe",
-    icons = {
-      { icon = "__base__/graphics/icons/landfill.png", icon_size = 64, icon_mipmaps = 3 },
-      { icon = "__bzaluminum__/graphics/icons/aluminum-ore.png", icon_size = 64, scale = 0.25},
-    },
-    name = "landfill-aluminum-ore",
-    category = "hard-recycling",
-    order = "z-b-aluminum",
-    subgroup = "terrain",
-    result = "landfill",
-    ingredients = {{"aluminum-ore", 50}},
-  }
-  })
-
   if mods["Krastorio2"] then
     data:extend({
     {
@@ -200,7 +169,7 @@ else
       
     },
     })
-    if util.me.byproduct() then util.add_product("alumina-smelting-vulcanite", {"silica", 2}) end
+    if util.me.byproduct() then util.add_product("alumina-smelting-vulcanite", {"silica", 2}, {force=true}) end
     table.insert(data.raw.technology["se-processing-vulcanite"].effects, 
         {type = "unlock-recipe", recipe= "alumina-smelting-vulcanite"})
   end

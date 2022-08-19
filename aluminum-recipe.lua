@@ -341,7 +341,7 @@ data:extend({
   },
 })
 for item, count in pairs(aluminum_6061) do
-  util.add_ingredient("aluminum-6061", item, count)
+  util.add_ingredient("aluminum-6061", item, count, {force=true})
 end
 util.add_prerequisite("basic-alloys", "silicon-processing")
 util.add_prerequisite("basic-alloys", "kr-silicon-processing")
@@ -400,7 +400,7 @@ data:extend({
   },
 })
 for item, count in pairs(aluminum_2219) do
-  util.add_ingredient("aluminum-2219", item, count)
+  util.add_ingredient("aluminum-2219", item, count, {force=true})
 end
 util.add_prerequisite("aerospace-alloys", "titanium-processing")
 util.add_prerequisite("aerospace-alloys", "zirconia-processing")
@@ -437,8 +437,8 @@ if mods.bztitanium then
   util.add_effect("laser", {type="unlock-recipe", recipe="ti-sapphire"})
   util.add_prerequisite("laser", util.titanium_processing)
   if mods.bzcarbon then
-    util.add_ingredient("ti-sapphire", "diamond", 1)
-    util.add_product("ti-sapphire", {type="item", name="diamond", amount=1, probability=0.8, catalyst_amount=1})
+    util.add_ingredient("ti-sapphire", "diamond", 1, {force=true})
+    util.add_product("ti-sapphire", {type="item", name="diamond", amount=1, probability=0.8, catalyst_amount=1}, {force=true})
   end
 end
 

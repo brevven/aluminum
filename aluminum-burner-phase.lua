@@ -36,6 +36,10 @@ if mods.Krastorio2 then
   util.add_ingredient("basic-tech-card", "aluminum-cable", 1)
 
   util.add_prerequisite("automation-science-pack", "copper-processing")
+  if mods.bobassembly then
+    util.set_prerequisite("basic-automation", {"kr-automation-core"})
+    util.set_tech_recipe("basic-automation", {{"basic-tech-card", 1}})
+  end
 end
 
 if mods["aai-industry"] then
@@ -73,6 +77,9 @@ if mods["aai-industry"] and mods.Krastorio2 then
 
 end
 
+util.add_prerequisite("nanobots", "electronics")
+util.add_unlock_force("electronics", "RTThrower-inserter-Recipe")
+
 -- Industrial Display Plates
 util.add_unlock_force("copper-processing", "copper-display-small")
 util.add_unlock_force("copper-processing", "copper-display-medium")
@@ -103,5 +110,6 @@ util.replace_ingredients_prior_to("electronics", "electronic-circuit", "aluminum
 util.replace_ingredients_prior_to("copper-processing", "copper-cable", "aluminum-cable")
 util.replace_ingredients_prior_to("copper-processing", "copper-plate", "aluminum-plate")
 -- Any post-fixes (eg aluminum back to copper) after this block
+  
 
 -- End of file

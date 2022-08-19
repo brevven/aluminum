@@ -1,5 +1,9 @@
 local util = require("data-util");
 
+
+-- BZ tweak
+util.replace_some_ingredient("bronze-plate", "copper-plate", 1, "aluminum-plate", 1)
+
 -- Big vanilla changes
 util.multiply_recipe("sulfur", 2)
 util.replace_some_ingredient("sulfur", "petroleum-gas", 10, "alumina", 1)
@@ -219,4 +223,12 @@ util.add_prerequisite("transport-system", "basic-alloys")
 util.replace_ingredient("extreme-fast-belt", "express-transport-belt", "aluminum-2219", 25)
 util.replace_ingredient("extreme-fast-underground-belt", "express-underground-belt", "aluminum-2219", 100)
 util.replace_ingredient("extreme-fast-belt-loader", "express-transport-belt-loader", "aluminum-2219", 50)
+
+-- Bob's assembling machines
+if mods.bobassembly then
+  util.replace_ingredient("burner-assembling-machine", "iron-plate", "aluminum-plate")
+  util.replace_ingredient("steam-assembling-machine", "iron-plate", "aluminum-plate")
+  util.add_prerequisite("electronics-machine-1", "electronics")
+end
+
 
