@@ -40,6 +40,7 @@ if mods.Krastorio2 then
     util.set_prerequisite("basic-automation", {"kr-automation-core"})
     util.set_tech_recipe("basic-automation", {{"basic-tech-card", 1}})
   end
+  util.remove_prerequisite("automation", "smelting") -- Bitumen mod
 end
 
 if mods["aai-industry"] then
@@ -79,6 +80,8 @@ end
 
 util.add_prerequisite("nanobots", "electronics")
 util.add_unlock_force("electronics", "RTThrower-inserter-Recipe")
+
+util.remove_prerequisite("smelting", "automation-science-pack") -- Bitumen mod
 
 -- Industrial Display Plates
 util.add_unlock_force("copper-processing", "copper-display-small")
