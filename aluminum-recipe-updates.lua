@@ -224,6 +224,10 @@ util.replace_ingredient("extreme-fast-belt", "express-transport-belt", "aluminum
 util.replace_ingredient("extreme-fast-underground-belt", "express-underground-belt", "aluminum-2219", 100)
 util.replace_ingredient("extreme-fast-belt-loader", "express-transport-belt-loader", "aluminum-2219", 50)
 
+-- Advanced belts
+util.add_ingredient("ultimate-belt", "aluminum-2219", 10)
+util.add_ingredient("ultimate-underground", "aluminum-2219", 40)
+
 -- Bob's assembling machines
 if mods.bobassembly then
   util.replace_ingredient("burner-assembling-machine", "iron-plate", "aluminum-plate")

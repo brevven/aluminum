@@ -16,6 +16,12 @@ if mods["space-exploration"] then
   util.add_to_product("se-core-fragment-omni", "aluminum-ore", -2)
 end
 
+-- vtk deep core mining balance
+util.add_to_product("vtk-deepcore-mining-ore-chunk-refining-aluminum-ore-focus", "vtk-deepcore-mining-aluminum-ore-chunk", 20)
+util.add_to_product("vtk-deepcore-mining-ore-chunk-refining", "vtk-deepcore-mining-aluminum-ore-chunk", 10)
+util.add_to_product("vtk-deepcore-mining-ore-chunk-refining-no-uranium", "vtk-deepcore-mining-aluminum-ore-chunk", 10)
+util.set_vtk_dcm_ingredients()
+
 if mods.bzsilicon then
 for i, entity in pairs(data.raw.furnace) do
   if entity.result_inventory_size ~= nil and entity.result_inventory_size < 2 and util.contains(entity.crafting_categories, "smelting") then

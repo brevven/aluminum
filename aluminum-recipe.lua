@@ -151,10 +151,15 @@ data:extend({
       ingredients = mods.Krastorio2 and 
       {{"basic-tech-card", 1}} or {{"automation-science-pack", 1}},
     },
-    prerequisites = {"automation"},
+    prerequisites = {},
     order = "b-b",
   },
 })
+if mods["aai-industry"] then
+  util.add_prerequisite("copper-processing", "electricity")
+else
+  util.add_prerequisite("copper-processing", "automation")
+end
 
 data:extend({
   {
