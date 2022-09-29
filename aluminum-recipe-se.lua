@@ -6,6 +6,21 @@ if mods["space-exploration"] then
   se_delivery_cannon_recipes["alumina"] = {name= "alumina"}
   se_delivery_cannon_recipes["aluminum-plate"] = {name= "aluminum-plate"}
   util.se_landfill({ore="aluminum-ore"})
+  
+  -- Space Exploration requires more aluminum than copper
+  se_resources["aluminum-ore"] = {
+    order = "b-z",
+    has_starting_area_placement = true,
+    base_density = 12,
+    starting_rq_factor_multiplier = 1.5,
+  }
+
+  se_resources["copper-ore"] = {
+    order = "c-b",
+    has_starting_area_placement = true,
+    base_density = 9,
+    starting_rq_factor_multiplier = 1.5,
+  }
 
 if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
   util.se_matter({ore="aluminum-ore", energy_required=1, quant_out=10, stream_out=60})
