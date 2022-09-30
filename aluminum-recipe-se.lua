@@ -5,6 +5,8 @@ if mods["space-exploration"] then
   se_delivery_cannon_recipes["aluminum-ore"] = {name= "aluminum-ore"}
   se_delivery_cannon_recipes["alumina"] = {name= "alumina"}
   se_delivery_cannon_recipes["aluminum-plate"] = {name= "aluminum-plate"}
+  se_delivery_cannon_recipes["aluminum-2219"] = {name= "aluminum-2219"}
+  se_delivery_cannon_recipes["aluminum-6061"] = {name= "aluminum-6061"}
   util.se_landfill({ore="aluminum-ore"})
   
   -- Space Exploration requires more aluminum than copper
