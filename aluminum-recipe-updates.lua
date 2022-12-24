@@ -35,7 +35,11 @@ if mods.bztitanium then
 else
   util.add_ingredient("laser-turret", "alumina", 5)
   util.add_ingredient("obelisk-of-light", "alumina", 5)
+
+  util.replace_ingredient("flying-robot-frame", "steel-plate", "aluminum-2219", 2)
+  util.add_prerequisite("robotics", "aerospace-alloys")
 end
+
 util.replace_some_ingredient("distractor-capsule", "defender-capsule", 1, "ti-sapphire", 1)
 
 -- "Mall" changes

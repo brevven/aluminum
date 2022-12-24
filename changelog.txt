@@ -5,6 +5,7 @@ Date: 2022-12-24
     - zh-CN by sunnytan53
   Changes:
     - SE ingot in delivery cannon
+    - When used without Titanium, use aluminum in flying robot frames.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.17
 Date: 2022-11-21
