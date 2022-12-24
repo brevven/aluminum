@@ -39,5 +39,7 @@ if mods.Asteroid_Mining then
   amfunc.addtype("aluminum-ore", {a = 0,r = 0.58,g = 0.6,b = 0.56})
 end
     
+require("aluminum-recipe-modules")
+
 -- Must be last
 util.create_list()

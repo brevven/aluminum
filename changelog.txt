@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.17
+Date: 2022-11-21
+  Fixes:
+    - Rollback mod name change from 0.4.16. This broke the mod name when the mod was not enabled.
+---------------------------------------------------------------------------------------------------
+Version: 0.4.16
+Date: 2022-11-20
+  Changes:
+    - When used with Aluminium Localization mod, mod name changes as well
+  Fixes:
+    - K2+GDIW prod module fix
+---------------------------------------------------------------------------------------------------
 Version: 0.4.15
 Date: 2022-09-29
   Changes:
