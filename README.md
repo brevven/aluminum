@@ -23,3 +23,4 @@ See changelog.txt
 - [Sakuro](https://github.com/sakuro) (ja)
 - [Yokmp](https://github.com/Yokmp) (de)
 - [Pergamum663](https://github.com/Pergamum663) (ru)
+- [sunnytan53](https://github.com/sunnytan53) (zh-CN)
