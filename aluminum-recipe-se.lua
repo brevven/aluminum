@@ -123,6 +123,8 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     se_delivery_cannon_recipes["enriched-aluminum"] = {name= "enriched-aluminum"}
     util.set_item_subgroup("enriched-aluminum", "aluminum")
   end
+  se_delivery_cannon_recipes["aluminum-ingot"] = {name= "aluminum-ingot"}
+
 else
   -- Organization
   data.raw.item["aluminum-plate"].subgroup = "plates"
