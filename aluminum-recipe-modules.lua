@@ -1,23 +1,6 @@
--- Enable prod modules for all aluminum plate and ore recipes
+local util = require("data-util")
 
-recipes = {"alumina", "aluminum-plate", "aluminum-cable", "acsr-cable", "spark-plug", "aluminum-2219", "aluminum-6061"}
-if mods["Krastorio2"] then
-  table.insert(recipes, "enriched-alumina")
-  table.insert(recipes, "enriched-aluminum")
-end
-if mods["space-exploration"] then
-  table.insert(recipes, "molten-aluminum")
-  table.insert(recipes, "alumina-smelting-vulcanite")
-  table.insert(recipes, "aluminum-plate-smelting-vulcanite")
-  if mods["Krastorio2"] then
-    table.insert(recipes, "enriched-alumina-smelting-vulcanite")
-  end
-end
-if mods.bztitanium then
-    table.insert(recipes, "ti-sapphire")
-end
-
-for i, recipe in pairs(recipes) do
+for i, recipe in pairs(util.me.recipes) do
   if data.raw.recipe[recipe] then
     for j, module in pairs(data.raw.module) do
       if module.effect then

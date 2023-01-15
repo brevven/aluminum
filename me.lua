@@ -3,6 +3,17 @@ local me = {}
 me.name = "bzaluminum"
 me.list = {}
 
+
+me.recipes = {"alumina", "aluminum-plate", "aluminum-cable", "acsr-cable", "spark-plug", "aluminum-2219", "aluminum-6061",
+           "enriched-alumina",
+           "enriched-aluminum",
+           "molten-aluminum",
+           "alumina-smelting-vulcanite",
+           "aluminum-plate-smelting-vulcanite",
+           "enriched-alumina-smelting-vulcanite",
+           "ti-sapphire",
+}
+
 function me.mod_setting()
   return me.get_setting("bzmod-setting") == "yes"
 end
