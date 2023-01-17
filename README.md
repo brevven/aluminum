@@ -24,3 +24,4 @@ See changelog.txt
 - [Yokmp](https://github.com/Yokmp) (de)
 - [Pergamum663](https://github.com/Pergamum663) (ru)
 - [sunnytan53](https://github.com/sunnytan53) (zh-CN)
+- [CV514](https://github.com/CV514) (ru)
