@@ -13,7 +13,7 @@ if mods["crafting-efficiency-2"] then
     (data.raw.recipe[recipe].main_product or util.get_result_count(recipe) == 1) then
       eff_data[recipe] = {
         max = 15,
-        icon = data.raw.item[recipe] and data.raw.item[recipe].icon or data.raw.fluid[recipe].icon,
+        icon = util.get_item_or_fluid_icon(recipe),
         crafting = { efficiency = 10 },
         research = { level = 6 },
       }
