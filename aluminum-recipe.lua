@@ -44,6 +44,7 @@ data:extend({
     enabled = true,
     energy_required = mods.Krastorio2 and 16 or 3.2,
     ingredients = {{"aluminum-ore", mods.Krastorio2 and 10 or 1}},
+    subgroup = "raw-material",
     results = alumina_results,
   },
   {
