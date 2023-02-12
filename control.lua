@@ -54,6 +54,11 @@ if script.active_mods["warptorio2_expansion"] then
       {name='repair-pack',count=20},
     }
     local entities = game.surfaces[1].find_entities_filtered{area = {{-100, -100}, {100, 100}}, name = "wpe_broken_lab"}
+    if #entities == 0 then
+      -- The lab has already been fixed
+      global.done = true
+      return
+    end
     if check_container_for_items(entities[1],fix_items) then
       remove_items_from_container(entities[1],fix_items)
       local lab = entities[1].surface.create_entity({name='wpe_repaired_lab', position=entities[1].position, force = game.forces.player})
