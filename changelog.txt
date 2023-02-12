@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.22
+Date: 2023-02-12
+  Fixes:
+    - Improved compatibility with Warptorio2Expansion, thanks to Marwes
+  Changes:
+    - Improved Crafting efficiency compatibility, thanks to nihilistzsche
+---------------------------------------------------------------------------------------------------
 Version: 0.4.21
 Date: 2023-02-03
   Features:
