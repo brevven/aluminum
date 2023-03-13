@@ -41,6 +41,10 @@ if mods.Krastorio2 then
     util.set_tech_recipe("basic-automation", {{"basic-tech-card", 1}})
   end
   util.remove_prerequisite("automation", "smelting") -- Bitumen mod
+
+  -- For warptorio2 expansion with K2
+  util.remove_prerequisite("laboratory", "automation-science-pack")
+  util.set_tech_recipe("laboratory", {{"basic-tech-card", 1}})
 end
 
 if mods["aai-industry"] then

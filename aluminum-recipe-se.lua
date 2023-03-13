@@ -34,6 +34,7 @@ if string.sub(mods["space-exploration"], 1, 3) == "0.6" then
     order = "a-h-z-a",
   }
   })
+  util.set_item_subgroup("aluminum-ore", "aluminum")
   util.set_item_subgroup("alumina", "aluminum")
   util.set_item_subgroup("aluminum-plate", "aluminum")
   data:extend({

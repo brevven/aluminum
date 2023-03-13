@@ -716,6 +716,8 @@ function multiply_recipe(recipe, multiple)
   if recipe then
     if recipe.energy_required then
       recipe.energy_required = recipe.energy_required * multiple
+    else
+      recipe.energy_required = 0.5 * multiple  -- 0.5 is factorio default
     end
     if recipe.result_count then
       recipe.result_count = recipe.result_count * multiple
@@ -1161,7 +1163,7 @@ function remove_prior_unlocks(tech, recipe)
     util.remove_recipe_effect(tech, recipe)
     if technology.prerequisites then
       for i, prerequisite in pairs(technology.prerequisites) do
-        -- log("BZZZ removing prior unlocks for " .. tech ..", checking " .. prerequisite) -- Handy Debug :|
+        log("BZZZ removing prior unlocks for " .. recipe .. " from " .. tech ..", checking " .. prerequisite) -- Handy Debug :|
         remove_prior_unlocks(prerequisite, recipe)
       end
     end
