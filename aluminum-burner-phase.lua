@@ -47,6 +47,10 @@ if mods.Krastorio2 then
   util.set_tech_recipe("laboratory", {{"basic-tech-card", 1}})
 end
 
+if mods.bobpower then
+  util.remove_prerequisite("automation-science-pack", "copper-processing")
+end
+
 if mods["aai-industry"] then
   util.replace_ingredient("burner-assembling-machine", "iron-plate", "aluminum-plate")
   util.replace_ingredient("small-iron-electric-pole", "copper-cable", "aluminum-cable")
@@ -119,6 +123,8 @@ util.replace_ingredients_prior_to("electronics", "electronic-circuit", "aluminum
 util.replace_ingredients_prior_to("copper-processing", "copper-cable", "aluminum-cable")
 util.replace_ingredients_prior_to("copper-processing", "copper-plate", "aluminum-plate")
 -- Any post-fixes (eg aluminum back to copper) after this block
+
+util.remove_prerequisite("copper-processing", "automation")
   
 
 -- End of file
