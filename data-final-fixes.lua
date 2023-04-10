@@ -3,7 +3,9 @@ require("aluminum-recipe-modules")
 -- require("aluminum-recipe-final-5d")
 require("aluminum-recipe-final-rrr")
 
-require("aluminum-burner-phase")
+if not mods["exotic-industries"] then
+  require("aluminum-burner-phase")
+end
 
 
 local util = require("data-util");
