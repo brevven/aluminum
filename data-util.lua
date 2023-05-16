@@ -130,33 +130,53 @@ function util.k2matter(params)
   if not params.k2matter.minimum_conversion_quantity then
     params.k2matter.minimum_conversion_quantity = 10
   end
-  data:extend(
-      {
+  if not data.raw.technology[params.k2matter.unlocked_by_technology] then
+    local icon = ""
+    if params.k2baseicon then
+      icon = util.k2assets().."/technologies/matter-"..params.k2baseicon..".png"
+    else
+      icon = util.k2assets().."/technologies/backgrounds/matter.png"
+    end
+    
+    data:extend(
         {
-          type = "technology",
-          name = params.k2matter.unlocked_by_technology,
-          icons =
           {
+            type = "technology",
+            name = params.k2matter.unlocked_by_technology,
+            icons =
             {
-              icon = util.k2assets().."/technologies/matter-"..params.k2baseicon..".png",
-              icon_size = 256,
+              {
+                icon = icon,
+                icon_size = 256,
+              },
+              params.icon,
             },
-            params.icon,
+            prerequisites = {"kr-matter-processing"},
+            unit =
+            {
+              count = 350,
+              ingredients = mods["space-exploration"] and 
+              {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"se-astronomic-science-pack-4", 1},
+                {"se-energy-science-pack-4", 1},
+                {"se-material-science-pack-4", 1},
+                {"se-deep-space-science-pack-2", 1},
+                {"se-kr-matter-science-pack-2", 1},
+              } or
+              {
+                {"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"matter-tech-card", 1}
+              },
+              time = 45,
+            },
+            localised_name = {"technology-name.k2-conversion", {"item-name."..params.k2matter.item_name}},
           },
-          prerequisites = {"kr-matter-processing"},
-          unit =
-          {
-            count = 350,
-            ingredients =
-            {
-              {"production-science-pack", 1},
-              {"utility-science-pack", 1},
-              {"matter-tech-card", 1}
-            },
-            time = 45,
-          }
-        },
-      })
+        })
+  end
   matter.createMatterRecipe(params.k2matter)
 end
 
@@ -533,13 +553,16 @@ end
 
 function add_product(recipe, product)
   if recipe ~= nil then
-    if not recipe.normal then
-      if recipe.results == nil then
-        recipe.results = {{recipe.result, recipe.result_count and recipe.result_count or 1}}
+    if (product[1] and data.raw.item[product[1]]) or 
+    (product.name and data.raw[product.type][product.name]) then
+      if not recipe.normal then
+        if recipe.results == nil then
+          recipe.results = {{recipe.result, recipe.result_count and recipe.result_count or 1}}
+        end
+        recipe.result = nil
+        recipe.result_count = nil
+        table.insert(recipe.results, product)
       end
-      recipe.result = nil
-      recipe.result_count = nil
-      table.insert(recipe.results, product)
     end
   end
 end
@@ -1008,7 +1031,7 @@ end
 -- Set recipe subgroup
 function util.set_subgroup(recipe_name, subgroup, options)
   if not should_force(options) and bypass(recipe_name) then return end
-  if data.raw.recipe[recipe_name] then
+  if data.raw.recipe[recipe_name] and data.raw["item-subgroup"][subgroup] then
     me.add_modified(recipe_name)
     data.raw.recipe[recipe_name].subgroup = subgroup
   end
@@ -1027,8 +1050,6 @@ function util.add_icon(recipe_name, icon, options)
   if data.raw.recipe[recipe_name] then
     me.add_modified(recipe_name)
     if not (data.raw.recipe[recipe_name].icons and #(data.raw.recipe[recipe_name].icons) > 0) then
-      log("BZZN")
-      log(serpent.dump(data.raw.recipe[recipe_name]))
       if data.raw.recipe[recipe_name].icon then
         data.raw.recipe[recipe_name].icons = {{
           icon=data.raw.recipe[recipe_name].icon,
@@ -1046,6 +1067,13 @@ function util.add_icon(recipe_name, icon, options)
           icon=data.raw.item[data.raw.recipe[recipe_name].result].icon,
           icon_size=data.raw.item[data.raw.recipe[recipe_name].result].icon_size,
           icon_mipmaps=data.raw.item[data.raw.recipe[recipe_name].result].icon_mipmaps,
+        }}
+      elseif data.raw.recipe[recipe_name].normal and
+      data.raw.item[data.raw.recipe[recipe_name].normal.result] then
+        data.raw.recipe[recipe_name].icons = {{
+          icon=data.raw.item[data.raw.recipe[recipe_name].normal.result].icon,
+          icon_size=data.raw.item[data.raw.recipe[recipe_name].normal.result].icon_size,
+          icon_mipmaps=data.raw.item[data.raw.recipe[recipe_name].normal.result].icon_mipmaps,
         }}
       end
       data.raw.recipe[recipe_name].icon = nil
@@ -1301,7 +1329,7 @@ function replace_ingredients_prior_to(tech, old, new, multiplier)
     end
     if technology.prerequisites then
       for i, prerequisite in pairs(technology.prerequisites) do
-        log("BZZZ checking " .. prerequisite) -- Handy Debug :|
+        -- log("BZZZ checking " .. prerequisite) -- Handy Debug :|
         if string.sub(prerequisite, 1, 3) ~= 'ei_' then
           replace_ingredients_prior_to(prerequisite, old, new, multiplier)
         end
