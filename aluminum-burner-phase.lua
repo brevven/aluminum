@@ -23,14 +23,15 @@ if not mods.Krastorio2 and not mods["aai-industry"] then
   util.add_prerequisite("logistic-science-pack", "electronics")
 end
 
+util.replace_ingredient("lab", "copper-plate", "aluminum-plate")
+util.replace_ingredient("lab", "copper-cable", "aluminum-cable")
+
 if mods.Krastorio2 then
   util.replace_ingredient("automation-core", "copper-plate", "aluminum-plate")
   util.replace_ingredient("kr-wind-turbine", "copper-cable", "aluminum-cable")
   util.replace_ingredient("kr-crusher", "copper-cable", "aluminum-cable")
   util.replace_ingredient("kr-sentinel", "copper-cable", "aluminum-cable")
   util.replace_ingredient("repair-pack", "copper-plate", "aluminum-plate")
-  util.replace_ingredient("lab", "copper-plate", "aluminum-plate")
-  util.replace_ingredient("lab", "copper-cable", "aluminum-cable")
 
   util.remove_ingredient("basic-tech-card", "copper-cable")
   util.add_ingredient("basic-tech-card", "aluminum-cable", 1)
@@ -46,6 +47,7 @@ if mods.Krastorio2 then
   util.remove_prerequisite("laboratory", "automation-science-pack")
   util.set_tech_recipe("laboratory", {{"basic-tech-card", 1}})
 end
+
 
 if mods.bobpower then
   util.remove_prerequisite("automation-science-pack", "copper-processing")
