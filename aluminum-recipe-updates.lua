@@ -139,7 +139,7 @@ util.replace_ingredient("chute-miniloader", "iron-plate", "aluminum-plate")
 
 if mods["space-exploration"] then
 
-  util.add_product("se-scrap-recycling", {name="aluminum-ore", amount=1, probability=0.1})
+  util.add_product("se-scrap-recycling", {type="item", name="aluminum-ore", amount=1, probability=0.1})
 
   util.replace_ingredient("se-adaptive-armour-equipment-1", "titanium-plate", "alumina")
   util.replace_ingredient("se-adaptive-armour-equipment-1", "steel-plate", "alumina")
