@@ -153,6 +153,7 @@ data:extend({
       {{"basic-tech-card", 1}} or {{"automation-science-pack", 1}},
     },
     prerequisites = {},
+    ignore_tech_cost_multiplier = true,
     order = "b-b",
   },
 })
