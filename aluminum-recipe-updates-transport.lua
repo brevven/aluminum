@@ -178,6 +178,17 @@ util.replace_ingredient("fluid-wagon-immortal-mk2", "iron-plate", "aluminum-6061
 util.replace_ingredient("cargo-wagon-immortal-mk3", "iron-plate", "aluminum-6061")
 util.replace_ingredient("fluid-wagon-immortal-mk3", "iron-plate", "aluminum-6061")
 
+-- Xenos
+util.replace_ingredient("vehicle-almf", "iron-plate", "aluminum-6061")
+util.add_prerequisite("vehicle-almf", "basic-alloys")
+util.replace_some_ingredient("vehicle-amt-b", "steel-plate", 10, "aluminum-6061", 20)
+util.add_prerequisite("vehicle-amt-b", "basic-alloys")
+util.replace_some_ingredient("robot-specialized-main-module", "steel-plate", 1, "aluminum-6061", 2)
+util.replace_ingredient("robot-main-module", "iron-plate", "aluminum-6061")
+util.add_prerequisite("active-factory-protection", "basic-alloys")
+util.replace_ingredient("vehicle-lat", "iron-plate", "aluminum-2219")
+util.add_prerequisite("vehicle-lat", "aerospace-alloys")
+
 -- Battery locomotive
 util.add_ingredient("battery-locomotive", "aluminum-6061", 30)
 
