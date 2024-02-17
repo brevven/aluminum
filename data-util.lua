@@ -173,7 +173,7 @@ function util.k2matter(params)
               },
               time = 45,
             },
-            localised_name = {"technology-name.k2-conversion", {"item-name."..params.k2matter.item_name}},
+            -- (ignore for now) localised_name = {"technology-name.k2-conversion", {"item-name."..params.k2matter.item_name}},
           },
         })
   end
