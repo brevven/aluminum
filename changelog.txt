@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.27
 Date: 2024-02-17
+  Fixes:
+    - Prevent possible soft lock with Warptorio 2 Expansion
   Changes:
     - Some improved recipe compatibility for Xenos mods
 ---------------------------------------------------------------------------------------------------

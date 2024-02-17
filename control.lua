@@ -30,44 +30,6 @@ script.on_init(
   end
 )
 
-if script.active_mods["warptorio2_expansion"] then
 
-  function check_container_for_items(container,items)
-    local has_all =true
-    for k=1,#items do 
-      if container.get_item_count(items[k].name)<items[k].count then has_all=false break end
-    end
-    return has_all 		
-  end
-
-  function remove_items_from_container(container,items)
-    for k=1,#items do 
-      container.remove_item(items[k])
-    end	
-  end
-
-  script.on_nth_tick(60, function (event)
-    if global.done then return end
-    local fix_items={
-      {name='iron-plate',count=100},
-      {name='iron-gear-wheel',count=100},
-      {name='repair-pack',count=20},
-    }
-    local entities = game.surfaces[1].find_entities_filtered{area = {{-100, -100}, {100, 100}}, name = "wpe_broken_lab"}
-    if #entities == 0 then
-      -- The lab has already been fixed
-      global.done = true
-      return
-    end
-    if check_container_for_items(entities[1],fix_items) then
-      remove_items_from_container(entities[1],fix_items)
-      local lab = entities[1].surface.create_entity({name='wpe_repaired_lab', position=entities[1].position, force = game.forces.player})
-      lab.destructible=false
-      lab.minable=false
-      entities[1].destroy()
-      global.done = true
-    end
-  end)
-end
-
+util.warptorio2_expansion_helper()
 
