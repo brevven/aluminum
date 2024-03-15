@@ -25,6 +25,7 @@ end
 
 util.replace_ingredient("lab", "copper-plate", "aluminum-plate")
 util.replace_ingredient("lab", "copper-cable", "aluminum-cable")
+util.replace_ingredient("lab", "basic-circuit-board", "aluminum-cable")  -- Bob's
 
 if mods.Krastorio2 then
   util.replace_ingredient("automation-core", "copper-plate", "aluminum-plate")
